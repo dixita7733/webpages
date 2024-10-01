@@ -1,0 +1,1104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Admin Panel</title>
+
+</head>
+<style>
+    .sitebarwidth{
+        width: calc(100% - 230px) !important;
+        margin-left: 230px !important;
+    }
+    .sitebarfullwidth{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+.sidebar::-webkit-scrollbar{
+  display: none;
+} 
+
+ .sidebar {
+  scrollbar-width: none;
+}
+.overflow-x-scroll::-webkit-scrollbar {
+    height: 5px; 
+}
+
+.overflow-x-scroll::-webkit-scrollbar-track {
+    background: #1F1F1F; 
+}
+
+.overflow-x-scroll::-webkit-scrollbar-thumb {
+    background: #212223; 
+    border-radius: 4px; 
+}
+
+.overflow-x-scroll::-webkit-scrollbar-thumb:hover {
+    background: #212223;
+}
+.chart-container {
+      width: 45%;
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+   
+#tinyLineChart, #tinyLineChart4, #tinyLineChart2, #tinyLineChart3{
+    height: 100px !important;
+    width: 100px !important;
+}
+#doughnutChart{
+    width: 80% !important;
+    padding: 10px 0px;
+    
+}
+
+@media (max-width: 1024px) {
+    .sitebarwidth{
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .sitebarfullwidth{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+    .sitebarwidth{
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .sitebarfullwidth{
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .sidebar{
+        height: 100vh !important;
+
+    }
+}
+
+</style>
+<body>
+
+
+
+<div class="main flex w-full">
+    <!-- sidebar  -->
+    <!-- <div class="sidebar w-auto items-center pt-4 h-[800px] bg-[#1F1F1F] border-r border-[#3b3b3b] text-white text-[21px] pb-[30px] md:flex flex-col justify-between fixed z-10 px-[20px] ">
+        <img src="./assets/logo-icon.svg" class="w-[30px]">
+        <i class="ri-timer-2-line text-[#6A69F5]"></i>
+        <i class="ri-apps-2-line"></i>
+        <i class="ri-box-3-line"></i>
+        <i class="ri-flashlight-line"></i>
+        <i class="ri-pie-chart-line"></i>
+        <i class="ri-at-fill"></i>
+        <i class="ri-drag-move-line"></i>
+        <i class="ri-file-chart-line"></i>
+        <i class="ri-table-line"></i>
+        <i class="ri-user-line"></i>
+        <i class="ri-pages-line"></i>
+        <i class="ri-layout-3-line"></i>
+        <i class="ri-git-repository-private-line"></i>
+        <i class="ri-list-check"></i>
+        <i class="ri-article-line"></i>
+    </div> -->
+    <!-- sidebar end  -->
+     <!-- big sidebar  -->
+     <div class="sidebar w-[230px] items-start pt-4  lg:h-[100vh]  bg-[#1F1F1F] border-r border-[#3b3b3b] text-white text-[21px] pb-[400px]  flex-col justify-between fixed z-10 px-[20px] overflow-y-scroll overflow-x-hidden  gap-3 hidden lg:flex sm:hidden">
+        <div class="logo flex justify-center w-[190px]">
+        <img src="./assets/logo-light.svg" class="w-[110px] mb-[18px]">
+    </div>
+        <p class="text-[15px] text-[#636363] font-semibold">Menu</p>
+        <div class="maindropbox w-[100%] relative">
+            <div class="topdropbox flex items-center justify-between h-auto mb-1">
+                <div class="flex items-center gap-2">
+                    <i class="ri-timer-2-line text-[#6A69F5]"></i>
+                    <span class="text-[16px] text-[#6A69F5]">Dashboard</span>
+                </div>
+                <i class="arrowicon ri-arrow-drop-down-line text-[#6A69F5]"></i>
+            </div>
+            <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#6A69F5]">Default</li>
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Projects &nbsp;<span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">New</span></li>
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">ECommerce &nbsp;<span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">New</span></li>
+    </ul>
+    </div>
+    
+
+
+    <div class="maindropbox w-[100%] relative">
+        <div class="topdropbox flex items-center justify-between h-auto mb-1">
+            <div class="flex items-center gap-2">
+                <i class="ri-apps-2-line text-white"></i>
+                <span class="text-[16px] text-white">Apps</span>
+            </div>
+            <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+        </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+            <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5] ">Email</li>
+            <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5] ">Chat </li>
+            <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5] ">Contact</li>
+            <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5] ">Invoice</li>
+            <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5] ">Calendar &nbsp;<span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">New</span></li>
+        </ul>
+</div>
+<p class="text-[15px] text-[#636363] font-semibold">Ul Kit</p>
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-box-3-line text-white"></i>
+            <span class="text-[16px] text-white">Components</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Tabs</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Accordions </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Modals</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Clipboard</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Notification </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Carousel </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Pricing</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Lightbox</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Countdown </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Counter </li>
+
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-flashlight-line text-white"></i>
+            <span class="text-[16px] text-white">Ul Elements</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Alerts</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Buttons </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Buttons Group</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Badge</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Breadcrumb </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Videos </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Images</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Dropdowns</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Typography </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Avatar</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Tooltips</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Loader</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Pagination </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Progress Bar</li>
+
+    </ul>
+</div>
+
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-pie-chart-line text-white"></i>
+            <span class="text-[16px] text-white">Chart</span>
+        </div>
+    </div>
+    
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-at-fill text-white"></i>
+            <span class="text-[16px] text-white">Font icons</span>
+        </div>
+    </div>
+    
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-drag-move-line text-white"></i>
+            <span class="text-[16px] text-white">drag & drop</span>
+        </div>
+    </div>
+    
+</div>
+<p class="text-[15px] text-[#636363] font-semibold">Table & Forms</p>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-file-chart-line text-white"></i>
+            <span class="text-[16px] text-white">Forms</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Basic</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">input Group </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Editors</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Validation</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Checkbox </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Carousel </li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Radio</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Switches</li>
+
+
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-table-line text-white"></i>
+            <span class="text-[16px] text-white">Tables</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Basic</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Datatables</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Editable</li>
+
+
+
+    </ul>
+</div>
+<p class="text-[15px] text-[#636363] font-semibold">Users & Pages</p>
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-user-line text-white"></i>
+            <span class="text-[16px] text-white">Users</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Profile</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Settings</li>
+
+
+
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-pages-line text-white"></i>
+            <span class="text-[16px] text-white">Pages</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Starter Page</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Maintenance</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Coming Soon</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">404 Error</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">500 Error</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">503 Error</li>
+
+
+
+
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-layout-3-line text-white"></i>
+            <span class="text-[16px] text-white">Layout</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Creative Detached</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Detached</li>
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-git-repository-private-line text-white"></i>
+            <span class="text-[16px] text-white">Authentication</span>
+        </div>
+        <i class="arrowicon ri-arrow-drop-down-line text-white"></i>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign in</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign Up</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Reset Passoword</li>
+
+    </ul>
+</div>
+<p class="text-[15px] text-[#636363] font-semibold">Table & Forms</p>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-list-check text-white"></i>
+            <span class="text-[16px] text-white">Changelog</span>
+        </div>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign in</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign Up</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Reset Passoword</li>
+
+    </ul>
+</div>
+
+<div class="maindropbox w-[100%] relative">
+    <div class="topdropbox flex items-center justify-between h-auto mb-1">
+        <div class="flex items-center gap-2">
+            <i class="ri-article-line text-white"></i>
+            <span class="text-[16px] text-white">Documentation</span>
+        </div>
+    </div>
+        <ul class="pl-[28px] slidedropbox w-full  lg:w-[190px] text-[16px] h-auto flex flex-col absolute bg-[#1F1F1F] z-20 hidden lg:static">
+
+
+        <li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign in</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Sign Up</li>
+<li class="text-[#A5A5A5] hover:list-disc hover:text-[#6A69F5]">Reset Passoword</li>
+
+    </ul>
+</div>
+
+<div class="bg-[#6A69F5] rounded-lg p-6 text-center text-white w-[190px] shadow-lg relative mt-[60px]">
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-[100%] p-2 shadow-lg">
+        <i class="ri-question-mark rounded-[50%] border border-black text-black text-[20px] p-[6px]"></i>
+    </div>
+    <h2 class="mt-5 text-xl font-semibold">Help Center</h2>
+    <p class="mt-2 text-[14px]">Looks like there might be a new theme soon.</p>
+    <button class="mt-4 bg-white text-black px-4 py-2 rounded text-[14px]">Go to help</button>
+</div>
+
+    </div>
+
+    <div class="sitebar sitebarwidth lg:w-[70%] relative right-0 lg:ml-[300px] md:w-[100%] w-[100%] md:ml-[0px]">
+
+        <!-- navbar  -->
+
+        <div class="nav-bar bg-[#1F1F1F] flex justify-between w-full px-[16px] items-center h-[60px] border-b border-[#3b3b3b] sticky absolute right-0 top-0 z-30">
+            <div class="nav-left flex w-auto justify-between text-white gap-[15px] items-center">
+                <!-- <input type="checkbox" class="mr-[-30px] z-10 hidden"> -->
+
+                <i class="ri-menu-2-line text-[22px]"></i>
+                <form action="#" class="md:flex justify-between w-[350px] items-center bg-[#151515] px-[10px] border border-[#3b3b3b] rounded-md hidden">
+                    <input type="text" placeholder="Search..." class="bg-transparent h-[37px] placeholder-[#535658]">
+                    <i class="ri-search-line"></i>
+                </form>
+            </div>
+                <div class="navright w-auto flex items-center text-[20px] gap-3.5 text-[#dcdcdc] justify-between">
+                    <i class="ri-fullscreen-line"></i>
+                    <i class="ri-sun-line"></i>
+                    <i class="ri-notification-3-line"></i>
+                    <div class="userprofile flex items-center gap-3">
+                        <img src="./assets/user (1).png" class="w-[30px] h-[30px] rounded-[50%]">
+                        <p class="text-[#cfcece] text-[15px] flex items-center">Stevens L. <i class="ri-arrow-drop-down-line text-[35px] text-[#cfcece]"></i></p>
+                </div>
+            </div>
+            
+    </div>
+    <div class="dropListOnUser w-[200px] border border-[#363636] rounded-lg border-t-0 float-right bg-[#202020] text-[#cfcece] mr-[20px] hover:cursor-pointer ps-[15px] py-[15px] flex flex-col gap-4 text-[14px] absolute right-0">
+        <p><i class="ri-user-line"></i> Profile</p>
+        <p><i class="ri-equalizer-line"></i> Settings</p>
+        <p><i class="ri-question-answer-line"></i> Messages</p>
+        <p><i class="ri-customer-service-2-line"></i> Support</p>
+        <div class="line w-100 border-t border-t-[#505050] ml-[-15px]"></div>
+        <p><i class="ri-logout-circle-r-line"></i> Log Out</p>
+    </div>
+    <!-- navbar end  -->
+
+<!-- dashboard content  -->
+<div class="dashboard-main w-full bg-[#151515] h-auto p-[20px] text-white">
+    <p class="">Sliced</p>
+    <h2 class="text-[20px] font-bold">Dashboard</h2>
+  
+    <section class="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Chart 1 -->
+      <div class=" p-1 h-[auto] border border-[#3b3b3b] bg-[#1F1F1F] rounded-[4px] flex">
+        <div class="leftbox bg-[#1F1F1F] p-[15px] w-[180px]">
+          <h2 class="text-[#D2D2D2] text-[18px]">Total Views</h2>
+          <h1 class="text-2xl font-bold pt-4 text-[22px]">15102 &nbsp;<span class="bg-[#294234] text-[#50CD89] font-bold px-[6px] rounded-md text-[14px]">23%</span></h1>
+          <p class="text-[15px] text-[#94989A]">Current Month</p>
+        </div>
+       
+        <div class="flex-1">
+                        <canvas id="tinyLineChart" class="w-[90px] pr-[15px]" style="padding-top: 20px; width:70px; height: 80px;"></canvas> 
+        </div>
+      </div>
+  
+      <!-- Chart 2 -->
+      <div class=" p-1 h-[auto] border border-[#3b3b3b] bg-[#1F1F1F] rounded-[4px] flex">
+        <div class="leftbox bg-[#1F1F1F] p-[15px] w-[180px]">
+          <h2 class="text-[#D2D2D2] text-[18px]">Paid Visits</h2>
+          <h1 class="text-2xl font-bold pt-4 text-[22px]">4581 &nbsp;<span class="bg-[#49262F] text-[#C53B6C] font-bold px-[6px] rounded-md text-[14px]">24%</span></h1>
+          <p class="text-[15px] text-[#94989A]">Current Month</p>
+        </div>
+        <div class="flex-1">
+                        <canvas id="tinyLineChart2" class="w-[90px] pr-[15px]" style="padding-top: 20px; width:70px; height: 80px;"></canvas>
+        </div>
+      </div>
+  
+      <!-- Chart 3 -->
+      <div class=" p-1 h-[auto] border border-[#3b3b3b] bg-[#1F1F1F] rounded-[4px] flex">
+        <div class="leftbox bg-[#1F1F1F] p-[15px] w-[180px]">
+          <h2 class="text-[#D2D2D2] text-[18px]">Total Views</h2>
+          <h1 class="text-2xl font-bold pt-4 text-[22px]">15102 &nbsp;<span class="bg-[#294234] text-[#50CD89] font-bold px-[6px] rounded-md text-[14px]">23%</span></h1>
+          <p class="text-[15px] text-[#94989A]">Current Month</p>
+        </div>
+        <div class="flex-1">
+                        <canvas id="tinyLineChart3" class="w-[90px] pr-[15px]" style="padding-top: 20px;width:70px; height: 80px;"></canvas> 
+        </div>
+      </div>
+  
+      <!-- Chart 4 -->
+      <div class=" p-1 h-[auto] border border-[#3b3b3b] bg-[#1F1F1F] rounded-[4px] flex">
+        <div class="leftbox bg-[#1F1F1F] p-[15px] w-[180px]">
+          <h2 class="text-[#D2D2D2] text-[18px]">Total Views</h2>
+          <h1 class="text-2xl text-[22px] font-bold pt-4">15102 &nbsp;<span class="bg-[#294234] text-[#50CD89] font-bold px-[6px] rounded-md text-[14px]">23%</span></h1>
+          <p class="text-[15px] text-[#94989A]">Current Month</p>
+        </div>
+        <div class="flex-1">
+                        <canvas id="tinyLineChart4" class="w-[90px] pr-[15px]" style="padding-top: 20px; width:70px; height: 80px;"></canvas> 
+        </div>
+
+      </div>
+    </section>
+  
+
+    <section class="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Total Revenue Chart -->
+        <div class="border border-[#3b3b3b] h-auto bg-[#1F1F1F] p-4 rounded-md md:col-span-2 lg:col-spa col-span-1 n-2  ">
+            <div class="tophead flex justify-between items-center">
+                <h2 class="text-[#D2D2D2] text-lg font-bold">Total Revenue</h2>
+                <i class="ri-more-line"></i>
+            </div>
+            <div class="flex-1 mt-[60px]">
+                <canvas id="curvedLineChart" class="w-full" style="height: auto;"></canvas>
+            </div>
+ 
+            <!-- <div class="shedule bg-[#1F1F1F]  py-[10px] h-[130px] flex flex-col justify-between items-left text-[#5f5f5f] border border-[#5f5f5f] w-[150px] rounded-sm absolute right-5 top-10">
+                <p class="one border-b border-b-[#5f5f5f] px-[20px] pb-2">Weekly</p>
+                <p class="two border-b border-b-[#5f5f5f] px-[20px] pb-2">Monthly</p>
+                <p class="three px-[20px] pb-2">Yearly</p>
+            </div> -->
+        </div>
+
+        <!-- Top Traffic By Source -->
+        <div class="border border-[#3b3b3b] h-auto bg-[#1F1F1F] p-4 rounded-md col-span-1">
+            <h2 class="text-[#D2D2D2] text-lg font-bold">Top Traffic By Source</h2>
+            <div class="contentbox flex items-center mt-4">
+                <div class="leftcbox w-10 h-10 bg-[#2E2E4A] flex items-center justify-center rounded-md mr-4">
+                    <i class="ri-chrome-line text-[#6A69F5] text-xl"></i>
+                </div>
+                <div class="rightcbox">
+                    <p class="text-sm text-white">Chrome</p>
+                    <p class="text-sm text-[#94989A]">Top Browser</p>
+                </div>
+                
+            </div>
+            <img src="assets/chrome.png" class="pt-[10px]">
+            <div class="contentbox flex items-center mt-4">
+                <div class="leftcbox w-10 h-10 bg-[#363636] flex items-center justify-center rounded-md mr-4">
+                    <i class="ri-safari-line text-white text-xl"></i>
+                </div>
+                <div class="rightcbox">
+                    <p class="text-sm text-white">Safari</p>
+                    <p class="text-sm text-[#94989A]">Top Browser</p>
+                </div>
+            </div>
+            <img src="assets/safari2.png" class="pt-[10px]">
+            <div class="contentbox flex items-center mt-4">
+                <div class="leftcbox w-10 h-10 bg-[#49262F] flex items-center justify-center rounded-md mr-4">
+                    <i class="ri-firefox-line text-[#F1416C] text-xl"></i>
+                </div>
+                <div class="rightcbox">
+                    <p class="text-sm text-white">Firefox</p>
+                    <p class="text-sm text-[#94989A]">Top Browser</p>
+                </div>
+            </div>
+            <img src="assets/firefox.png" class="pt-[10px]">
+            <div class="contentbox flex items-center mt-4">
+                <div class="leftcbox w-10 h-10 bg-[#19394A] flex items-center justify-center rounded-md mr-4">
+                    <i class="ri-edge-new-line text-[#0685CC] text-xl"></i>
+                </div>
+                <div class="rightcbox">
+                    <p class="text-sm text-white">Edge</p>
+                    <p class="text-sm text-[#94989A]">Top Browser</p>
+                </div>
+            </div>
+            <img src="assets/edge.png" class="pt-[10px]">
+
+        </div>
+
+        <!-- Users By Device -->
+        <div class="border border-[#3b3b3b] h-auto bg-[#1F1F1F] p-4 rounded-md col-span-1">
+            <h2 class="text-[#D2D2D2] text-lg font-bold">Users By Device</h2>
+            <div class="rightbox mt-4 flex justify-center">
+                <canvas id="doughnutChart" class="w-full" style="height: auto; width: 100%;"></canvas>
+            </div>
+        </div>
+    </section>
+  
+      <!-- Top Performing Pages Table -->
+      <section class="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 ">
+        <div class="bg-[#1F1F1F] border border-[#3b3b3b] rounded-[4px] p-[15px] h-auto">
+
+        <h2 class="text-[#D2D2D2] text-[18px] font-bold mb-[20px]">Top Performing Pages</h2>
+        <div class="overflow-x-scroll mytable">
+          <table border="1" width="670px" cellspacing="0" cellpadding="15">
+            <thead>
+              <tr bgcolor="#2A2A2A" align="left">
+                <th>Page Name</th>
+                <th>Clicks</th>
+                <th>Sessions</th>
+                <th>% Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr align="left">
+                <td>http://sliced.com/Index.html</td>
+                <td>55</td>
+                <td>2952</td>
+                <td>27% <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">3.8%</span></td>
+              </tr>
+              <tr align="left">
+                <td>http://google.com</td>
+                <td>229</td>
+                <td>2392</td>
+                <td>65% <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">7.9%</span></td>
+              </tr>
+              <tr align="left">
+                <td>http://facebook.com/Index.html</td>
+                <td>12</td>
+                <td>2792</td>
+                <td>37% <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">19.8%</span></td>
+              </tr>
+              <tr align="left">
+                <td>http://twitter.com</td>
+                <td>239</td>
+                <td>6534</td>
+                <td>74% <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">23.3%</span></td>
+              </tr>
+              <tr align="left">
+                <td>http://github.com/Index.html</td>
+                <td>53</td>
+                <td>3434</td>
+                <td>71% <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">46.2%</span></td>
+              </tr>
+              <tr align="left">
+                <td>http://instagram.com</td>
+                <td>65</td>
+                <td>123</td>
+                <td>69% <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">6.89%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <!-- Users By Countries Table -->
+      <div class="bg-[#1F1F1F] border border-[#3b3b3b] rounded-[4px] p-[15px] h-auto">
+        <h2 class="text-[#D2D2D2] text-[18px] font-bold mb-[20px]">Users By Countries</h2>
+        <div class="overflow-x-scroll mytable">
+          <table border="1" width="670px" cellspacing="0" cellpadding="15">
+            <tr bgcolor="#2A2A2A" align="left">
+              <th>Countries Name</th>
+              <th>Device</th>
+              <th>Age</th>
+              <th>Sessions</th>
+            </tr>
+            <tr align="left">
+              <td>Ireland</td>
+              <td>Desktop</td>
+              <td>18</td>
+              <td>2.3K <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">3.8%</span></td>
+            </tr>
+            <tr align="left">
+              <td>United States</td>
+              <td>Mobile</td>
+              <td>24 - 36</td>
+              <td>879 <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">7.9%</span></td>
+            </tr>
+            <tr align="left">
+              <td>Germany</td>
+              <td>Tablet</td>
+              <td>50</td>
+              <td>340 <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">19.8%</span></td>
+            </tr>
+            <tr align="left">
+              <td>United Kingdom</td>
+              <td>Desktop</td>
+              <td>24 - 36</td>
+              <td>5.4K <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">23.3%</span></td>
+            </tr>
+            <tr align="left">
+              <td>India</td>
+              <td>Tablet</td>
+              <td>18</td>
+              <td>1.3K <span class="bg-[#24312A] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#46CD89]">46.2%</span></td>
+            </tr>
+            <tr align="left">
+              <td>Singapore</td>
+              <td>Mobile</td>
+              <td>18 - 24</td>
+              <td>699 <span class="bg-[#34232C] w-[15px] px-[7px] py-[2px] rounded-sm text-[12px] text-[#EC4899]">6.89%</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </section>
+    </div>
+  </div>
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const ctx = document.getElementById('tinyLineChart').getContext('2d');
+    const tinyLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+            datasets: [{
+                label: 'Views',
+                data: [10, 82, 40, 65, 20, 89, 40, 20, 70, 98],
+                borderColor: '#34694C',
+                fill: false,
+                borderWidth: 2,
+                tension: 0.4 
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                enabled: true,
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.raw;
+                    }
+                }
+            }
+        },
+            elements: {
+                point: {
+                    radius: 1,
+                    hoverRadius: 5,
+                    hoverBorderWidth: 2
+                }
+            }
+        }
+    });
+});
+
+
+</script>
+
+<!-- chart 2 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const ctx = document.getElementById('tinyLineChart2').getContext('2d');
+const tinyLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Views',
+            data: [10, 82, 40, 65, 20, 89, 40, 20, 70, 98],
+            borderColor: '#A53550',
+            fill: false,
+            borderWidth: 2,
+            tension: 0.4 
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                display: false
+            },
+            y: {
+                display: false
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: true,
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.raw;
+                    }
+                }
+            }
+        },
+        elements: {
+            point: {
+                radius: 1,
+                hoverRadius: 5,
+                hoverBorderWidth: 2
+            }
+        }
+    }
+});
+});
+
+
+</script>
+
+<!-- chart 3 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const ctx = document.getElementById('tinyLineChart3').getContext('2d');
+const tinyLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Views',
+            data: [10, 40, 40 , 10, 20, 89, 70, 20, 70, 98],
+            borderColor: '#A53550',
+            fill: false,
+            borderWidth: 2,
+            tension: 0.4 
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                display: false
+            },
+            y: {
+                display: false
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: true,
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.raw;
+                    }
+                }
+            }
+        },
+        elements: {
+            point: {
+                radius: 1,
+                hoverRadius: 5,
+                hoverBorderWidth: 2
+            }
+        }
+    }
+});
+});
+
+
+</script>
+
+<!-- chart 4 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+const ctx = document.getElementById('tinyLineChart4').getContext('2d');
+const tinyLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Views',
+            data: [0, 82, 60 , 65, 0, 10, 80, 20, 70, 98],
+            borderColor: '#34694C',
+            fill: false,
+            borderWidth: 2,
+            tension: 0.4 
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                display: false
+            },
+            y: {
+                display: false
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: true,
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.raw;
+                    }
+                }
+            }
+        },
+        elements: {
+            point: {
+                radius: 1,
+                hoverRadius: 5,
+                hoverBorderWidth: 2
+            }
+        }
+    }
+});
+});
+
+
+</script>
+
+<!-- chart 5  -->
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const ctx = document.getElementById('curvedLineChart').getContext('2d');
+    const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.4
+        },
+        {
+            label: 'My Second Dataset',
+            data: [28, 48, 40, 19, 86, 27, 90],
+            fill: false,
+            borderColor: 'rgb(255, 99, 132)',
+            tension: 0.4
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    display: true,
+                    ticks: {
+                        color: '#ffffff' // X-axis label color
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.2)' // X-axis grid line color
+                    }
+                },
+                y: {
+                    display: true,
+                    ticks: {
+                        color: '#ffffff' // Y-axis label color
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.2)' // Y-axis grid line color
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        color: '#ffffff' // Legend label color
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
+                        }
+                    }
+                }
+            },
+            elements: {
+                point: {
+                    radius: 0,
+                    hoverRadius: 5,
+                    hoverBorderWidth: 2
+                }
+            }
+        }
+    };
+
+    const curvedLineChart = new Chart(ctx, config);
+});
+
+ </script>
+
+ <!-- chart 6  -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+
+    const data = {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [300, 50, 100],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.raw;
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    new Chart(doughnutCtx, config);
+});
+
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $(".dropListOnUser").hide()
+        $(".userprofile").click(function(){
+            $(".dropListOnUser").fadeToggle(100)
+        })
+        // $(".dashboard-main").not(".userprofile").click(function(){
+        //     $(".dropListOnUser").fadeOut(100)
+        // })
+        $(document).on('click', function(divclose){
+            if($(divclose.target).closest(".userprofile, .dropListOnUser").length == 0)
+        {
+            $(".dropListOnUser").fadeOut(100)
+        }  
+        })
+
+        $(document).on('click', function(divclose){
+            if($(divclose.target).closest(".sidebar , .ri-menu-2-line").length == 0)
+        {
+            if ($(".sitebar").hasClass("sitebarwidth")) {
+            $(".sitebar").removeClass("sitebarwidth").addClass("sitebarfullwidth");
+            $(".sidebar").hide()
+        } else {
+            $(".sitebar").removeClass("sitebarfullwidth").addClass("sitebarwidth");
+            $(".sidebar").show()
+        }
+       
+            
+        }  
+        })
+
+        // $(document).on('click', function(divclose){
+        //     if($(divclose.target).closest(".shedule , .ri-more-line").length == 0)
+        // {
+        //     $(".shedule").fadeOut(100)
+        // }  
+        // })
+
+        $(".slidedropbox").hide()
+        $(".topdropbox").click(function(){
+            $(".slidedropbox").not($(this).next()).slideUp(100)
+            $(".arrowicon").not($(this).children(".arrowicon")).removeClass("ri-arrow-drop-up-line").addClass("ri-arrow-drop-down-line")
+            $(this).next().slideToggle(100)
+            $(this).children(".arrowicon").toggleClass("ri-arrow-drop-up-line ri-arrow-drop-down-line ")
+        })
+        
+
+        $(".ri-menu-2-line").click(function() {
+        $(".sidebar").fadeToggle(10);
+        if ($(".sitebar").hasClass("sitebarwidth")) {
+            $(".sitebar").removeClass("sitebarwidth").addClass("sitebarfullwidth");
+        } else {
+            $(".sitebar").removeClass("sitebarfullwidth").addClass("sitebarwidth");
+        }
+    });
+        
+
+    })    
+</script>
+
+<!--1 -   https://apexcharts.com/javascript-chart-demos/line-charts/realtime/ -->
+ 
+</html>
