@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Doctor Clinic - Full Webpage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Doctor's Clinic</h1>
+  
+  <!-- Navigation Section -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+  <!-- Welcome Section -->
+  <section class="containerw">
+    <h2>Welcome to Our Clinic</h2>
+    <p>We provide top-notch healthcare services with a team of experienced doctors and medical staff.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="containerf">
+    <h2>Why Choose Us</h2>
+    <div class="grid-3">
+      <div class="card">
+        <img src="images/expdoc3.jpg" alt="Experienced Doctors" >
+        <h3>Experienced Doctors</h3>
+        <p>Our team consists of highly qualified and experienced medical professionals.</p>
+      </div>
+      <div class="card">
+        <img src="images/adtech.avif" alt="Advanced Technology">
+        <h3>Advanced Technology</h3>
+        <p>We use state-of-the-art medical equipment to provide accurate diagnosis and treatments.</p>
+      </div>
+      <div class="card">
+        <img src="images/pcarre.jpg" alt="Patient Care">
+        <h3>Patient-Centered Care</h3>
+        <p>We prioritize our patients and offer personalized care to suit their individual needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service-box">
+        <i class="service-icon fa fa-stethoscope"></i>
+        <h3>General Checkup</h3>
+        <p>Comprehensive health assessments for patients of all ages.</p>
+      </div>
+      <div class="service-box">
+        <i class="service-icon fa fa-heartbeat"></i>
+        <h3>Cardiology</h3>
+        <p>Expert care for heart conditions and cardiovascular health.</p>
+      </div>
+      <div class="service-box">
+        <i class="service-icon fa fa-syringe"></i>
+        <h3>Vaccination</h3>
+        <p>Safe and effective vaccinations for adults and children.</p>
+      </div>
+      <div class="service-box">
+        <i class="service-icon fa fa-x-ray"></i>
+        <h3>Radiology</h3>
+        <p>State-of-the-art imaging services for accurate diagnosis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testimonial">
+          <p>"The doctors and staff are very professional and caring. Highly recommend!"</p>
+          <h4>- Dr. Emily Thompson</h4>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial">
+          <p>"Exceptional service and modern medical facilities. They really take care of their patients."</p>
+          <h4>- Mr. John Carter</h4>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial">
+          <p>"Great experience, the doctors were very attentive and provided excellent care."</p>
+          <h4>- Mrs. Sarah Lewis</h4>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Copyright © 2024 Doctor Clinic. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>

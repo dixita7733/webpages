@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}h1, h2, h3, h4, h5, h6{
+    font-family: "Josefin Sans", sans-serif;
+}img.logoimg {
+    height: 50px;
+}header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 88px;
+    align-items: center;
+    padding-top: 15px;
+    background-color: transparent;
+}.nav-link{
+    display: flex;
+}.nav-link li{
+    list-style: none;
+    margin-right: 35px;
+}.nav-link li a{
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: white;
+}.banner{
+    background-image: url(bannerbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:800px;
+    margin-top: -11%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-inline: 64px;    
+}.banner-container{
+    padding-top: 10%;  
+}.border{
+    border: 1px solid white;
+    margin: 18px;
+}.portfolio-container{
+    background-color: black;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.pohead{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}.poparagraph{
+    font-size: 18px;
+    color:white;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 10px; margin-bottom:15px;
+}.title-line {
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    padding-inline: 28%;
+}.title-hr{
+        margin-bottom: 50px;
+        text-align: center;
+        width: 100%;
+}.ulcat .cat-link{
+    list-style: none;
+    margin-right: 15px;
+}.ulcat{
+    display: flex;
+}.cat-link a{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #A81C51;
+    color:white;
+}.photos{
+    background-image: url(portfolio-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0px;
+}.photocontainer {
+    display: flex;
+    justify-content: center;    padding-inline: 160px; width:1349px;
+}.photo{
+    margin: 10px 10px;
+}.blog{
+    padding: 50px 0px;
+    background-color: black;
+}.blog-container{
+    display: flex; flex-direction: column;
+    justify-content: center;     width:1349px; 
+}.blog-sec{
+    display: flex;    margin-top: -4px;
+}.blog-left{
+    width:50%;
+}.blhead{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}.alhead{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 25px;
+}.blcontent{
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;color: whitesmoke;
+    text-align: center;
+    padding-inline: 15%;margin-bottom: 25px;
+}.alcontent{
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;color: whitesmoke;
+    padding-inline: 6%;margin-bottom: 25px;
+}.blog-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;justify-content: center;
+    align-items: center;
+    height: 370px;
+}.about-right{
+height: 493px;
+width: 50%;
+display: flex;
+flex-direction: column;justify-content: center;
+align-items: center;
+}.blog-right a{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #A81C51;
+    color:white;
+}#cunique{
+    margin-bottom: 20%;
+}.about-sec{
+    display: flex;  justify-content: space-around;  margin-top: 4px;     padding-inline: 68px
+}h1.alhead {
+    margin-left: -47%;
+    margin-top: 25px;
+}.footer-container{
+    background-color: black;
+    padding: 20px 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.foot-link{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}.foot-li{
+    list-style: none;
+    margin-right: 15px;
+}.foot-li .socials{
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;color:white;
+}.fa-brands{
+    font-size: 170%;color: white;
+}.copy{
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+    height: 40px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gray;
+    margin-top: 20px;
+}.footerline{
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}

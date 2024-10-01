@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img.logoimg {
+    height: 120px;
+}header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 88px;
+    align-items: center;
+    padding-top: 15px;
+    background-color: transparent;
+}.nav-link{
+    display: flex;
+}.nav-link li{
+    list-style: none;
+    margin-right: 35px;
+}.nav-link li a{
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: white;
+}.banner{
+    background-image: url(bannerbg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:700px;
+    margin-top: -11%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-inline: 64px;
+}.banner-container{
+    padding-top: 10%;
+}.timer{
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+}.times{
+    font-size: 30px;    color: white;letter-spacing: 1px;
+}.timer h3::first-letter{
+    font-size: 60px;
+}h2.entry-title {
+    color: white;
+    font-size: 75px;
+    margin-top: 20px;
+    margin-left:35px;margin-bottom: 35px;
+}.gradient-bg{
+    background: linear-gradient(90deg, rgba(139,7,188,1) 0%, rgba(139,7,188,1) 0%, rgba(118,67,138,1) 30%, rgba(189,132,210,1) 100%, rgba(243,238,245,1) 100%);
+    padding: 15px 50px;
+    border-radius: 40px;color:white;text-decoration: none;font-size: 20px;margin-left: 35px;letter-spacing: 1px;
+}.about-container{
+    display: flex;
+    width:100%;
+    padding-inline: 100px;
+    height: 600px;
+    align-items: center;
+}.left{
+    width:50%;
+}.right{
+    width:50%;
+}.axboutimg{
+    width: 400px;
+    height:300px;
+}.abouthead{
+    font-size: 50px;
+    margin-bottom: 25px;
+}.aboutcontent{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}.agradient-bg{
+    background: linear-gradient(90deg, rgba(139,7,188,1) 0%, rgba(139,7,188,1) 0%, rgba(118,67,138,1) 30%, rgba(189,132,210,1) 100%, rgba(243,238,245,1) 100%);
+    padding: 15px 50px;
+    border-radius: 40px;color:white;text-decoration: none;font-size: 20px;letter-spacing: 1px;margin-right:15px;
+}.black-bg{
+    background: #231E23;
+    padding: 15px 50px;
+    border-radius: 40px;color:white;text-decoration: none;font-size: 20px;letter-spacing: 1px;
+}.gallery-container{
+    background-image: url(gallerybg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: start;
+    align-items: center;
+    padding-inline: 100px;
+    padding-top: 100px;
+    height: 1450px;
+}.sec1, .sec2, .sec3, .sec4 {
+    display: flex;
+    justify-content: space-between;
+}.two {
+    margin-top: 220px;
+}img.\33 img {
+    margin-top: 110px;
+}img.\34 img {
+    margin-top: 330px;
+}.five {
+    margin-top: -84px;
+}.six {
+    margin-top: 32px;
+    margin-left: 0px;
+}img.\37 img {
+    margin-left: 206px;
+    margin-top: -84px;
+}img.\39 img {
+    margin-left: 135%;
+    margin-top: -56%;
+}.ten {
+    padding-right: 8%;
+}.event-container {
+    width: 100%;
+    padding-inline: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}.ehead{
+    font-size: 50px;
+    margin:10px 0px;
+    background-image: url(gheadbg.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}.econtent{
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-inline: 40px;
+    padding-top: 10px;
+    line-height: 30px;
+}.eventparts{
+    display: flex;
+    margin-top: 70px;
+}.e1img{
+    height: 400px;
+}.ephead{
+    font-size: 27px;
+    margin-bottom: 15px;
+}.ephead2{
+    font-size: 20px;
+        margin-bottom: 15px;
+}.epcontent{
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+}.ebtn{
+   font-size: 15px !important;
+}.fcontainer{
+    background-color: #08011E;
+    margin-top: 100px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}.fnav-link {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}.fnav-link li a{
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    color: aliceblue;
+}.copy{
+    color: rgb(159, 147, 147);
+    margin-bottom: 30px;
+}.social-list{
+    display: flex;
+    justify-content: center;
+}.social-list li{
+    font-size: 25px;
+    margin-right: 10px; 
+    list-style: none;
+}

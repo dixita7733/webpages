@@ -1,0 +1,277 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #1B1B1B;
+    text-align: center;
+    position: fixed;width: 100%;
+    padding-inline: 12%;z-index: 1;
+}.list-nav{
+    display: flex;
+}.list-nav li{
+    list-style: none;
+    display: flex;
+    margin-right: 30px;       
+}.list-nav li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #C0CCCE;letter-spacing: 1px;
+}.logoname{
+    letter-spacing: 2.5px;
+    font-size: 24px;color: #5E6E71;    height: 50px;
+}
+.login{
+    display: flex;
+    align-items: center;
+}.user{
+    margin-right: 10px;
+}.bag{
+    margin-left: 10px;
+}.login a{
+    text-decoration: none;
+    color: #C0CCCE;letter-spacing: 1px;
+}
+.banner-container {
+    color: white;
+    display: flex;
+    background-image: url(bannerbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-inline: 6%;
+    background-size: cover;
+    padding-inline: 53px;
+    justify-content: left;
+    align-items: center;height:533px;
+}p.bphead {
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 8px 0px;
+    margin-bottom: 26px;
+    width: 460px;
+    line-height: 29px;
+}.banner{
+    padding-top: 100px;
+}.right, .left{
+    width: 50%;
+}h1.bhead {
+    font-size: 80px;
+    padding-bottom: 10px;
+}a.bbtn2 {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 25px;text-decoration: none;margin-left:15px;
+}a.bbtn1 {
+    border: 1px solid #fff;
+    background-color: white;
+    color: black;
+    padding: 12px 26px;
+    border-radius: 25px;text-decoration: none;
+}.about-container{
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-inline: 6%;
+    background-size: cover;
+    padding-inline: 53px;
+    justify-content: left;
+    align-items: center;height:533px;
+}.aleft{
+    width: 50%;
+}.aright{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}.aimg{
+    height: 450px;
+}h1.ahead {
+    font-size: 46px;
+    margin-bottom: 16px;
+}p.acontent {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: black;letter-spacing: 1px;line-height: 23px;
+
+}.service{
+   background-color: #1B1B1B;
+   padding-bottom: 7%;
+}.service-container{
+    padding-inline: 53px;
+    margin-inline: 6%;
+    padding-top: 30px;
+}.mainhead{
+    font-size:46px;color:white;
+}.servcontent{
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 50%;margin-top: 10px;margin-bottom: 5%;
+    color:#C0CCCE;letter-spacing: 1px;line-height: 23px;
+}.servaria{
+    display: flex;
+}.part1, .part2{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 30px;
+}.part3{
+    padding: 30px;border-bottom: 1px solid white;
+}.parthead{
+    color: white;
+    font-weight: 500;
+    font-size: 23px;
+    margin: 15px 0px;
+    letter-spacing: 1px;
+}.pcontent{
+    font-size: 15px;
+    color:#C0CCCE;letter-spacing: 1px;line-height: 23px;
+}.headpart{
+    padding-left: 30px;padding-top:20px;
+}.part4, .part5{
+    border-right: 1px solid white;
+    padding: 30px;
+}.part6{
+    padding: 30px;
+}.gmainhead{
+    font-size:46px;color:black;margin: 40px 0px;
+}
+.gallery-container{
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-inline: 6%;
+        background-size: cover;
+        padding-inline: 53px;
+        justify-content: left;
+        /* align-items: center;height:533px; */
+ }
+ .photos{
+    display: flex;
+    justify-content: space-evenly;
+ }.photo1, .g1{
+    height: 300px;
+    width: 320px;
+ }.photo2, .g2{
+    height: 300px;
+    width: 320px;
+ }
+ .photo3, .g3{
+    height: 400px;
+    width: 320px;
+ }
+ .photo4, .g4{
+    height: 250px;
+    width: 320px;
+    margin-top: -34px;
+ }.photo5, .g5{
+    height: 300px;
+    width: 320px;    margin-top: -34px;
+ }
+ .photo6, .g6{
+    height: 190px;
+    width: 320px;
+    margin-top: 20px;
+ }
+
+ .photo7, .g7 {
+    height: 250px;
+    width: 320px;
+    margin-top: -27px;
+}.photo8, .g8{
+    height: 200px;
+    width: 320px;    margin-top: 0px;
+ }.photo9, .g9{
+    height: 200px;
+    width: 320px;    
+ }
+
+ .footer-container{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 200px;    padding-bottom: 30px;
+ }.copyright{
+    display: flex;
+    justify-content: center;
+    height:40px;
+    background-color: #1B1B1B;
+    align-items: center;
+    margin-top: 15px;
+ }footer{
+    background-color: #1B1B1B;
+    color:white;
+   padding-top: 60px;
+   padding-bottom: 20px;margin-top: 20px;
+ }.fhead, .pcontact, .agmail{
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #c4c7c8;
+    margin-bottom: 39px;
+    font-size: 22px;
+
+ }.agmail{
+    text-decoration: none;
+ }.emailfield {
+    height: 40px;
+    width: 450px;
+    padding-left: 10px;
+    background-color: transparent;
+    color: #c4c7c8;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}::placeholder {
+    color: #c4c7c8;
+    opacity: 1; 
+  }
+  .aceept {
+    margin-inline: 81px;
+}.fbtn{
+    background-color: #405357;
+    width: 450px;
+    padding: 6px 0px;    color: #c4c7c8;border: none;
+    font-size: 17px;letter-spacing: 1px;
+}.social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;    margin-left: -20px;
+}i.fa-brands {
+    font-size: 19px;
+}.copy a{
+    color: #c4c7c8;
+}.copy{
+    letter-spacing: 1px;
+    font-size: 15px;
+    color:#c4c7c8;
+}img.foologo {
+    height: 50px;
+}.contact{
+    width:300px;
+}p.pcontact {
+    margin-top: 15px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 20px;
+}.fooli a{
+    text-decoration: none;
+    line-height: 25px;margin-left:5px; color:#c4c7c8;letter-spacing: 1px;
+}.fooli{
+    margin-left: 25px;
+
+}.fchead{
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #c4c7c8;
+    margin-bottom: 39px;
+    font-size: 22px;
+    margin-left: 15px;
+}
+
+

@@ -1,0 +1,248 @@
+Important links 
+
+
+css buttons 
+https://www.sliderrevolution.com/resources/css-button-hover-effects/
+
+images 
+https://unsplash.com/
+
+find professional color:
+https://colorhunt.co/
+
+find fonts:
+https://www.cssfontstack.com/
+
+icons:
+https://www.flaticon.com/
+
+cpanel
+https://alloxesinfotech.com:2083/cpsess8562798591/frontend/paper_lantern/filemanager/index.html
+credentials
+
+ajax video
+https://www.youtube.com/watch?v=DLd6Tt5nQO0
+
+1] provide free images:
+   https://pixabay.com/
+   https://www.pexels.com/
+
+1) For create address 
+   https://getmypincode.com/pincode/code/CH/Kanton-Thurgau/Arbon-District/Freidorf-TG
+
+2) Convert file extensions
+   https://pdfcandy.com
+
+3) How to for jQuery concept
+   https://stackhowto.com/how-to-get-selected-file-name-from-input-type-file-using-jquery/
+
+4) Insert Excel File into MySQL using PHP
+   https://www.kodingmadesimple.com/2017/02/insert-excel-file-into-mysql-using-php.html
+
+5) GitHub reference code
+   https://github.com/rdcorp/rohan-code-blocks
+
+6) How to get names of all the subfolders and files present in a directory using PHP?
+   https://www.geeksforgeeks.org/how-to-get-names-of-all-the-subfolders-and-files-present-in-a-directory-using-php/
+
+7) how to migrate WordPress.com to WordPress.org
+   https://themeisle.com/blog/migrate-wordpress-com-to-wordpress-org/
+
+8) Integrating Your Webcam With WordPress
+   https://wisdmlabs.com/blog/integrating-your-webcam-with-wordpress/
+
+9) WordPress add cron job programmatically
+   https://www.codesmade.com/wordpress-add-cron-job-programmatically/
+
+10) How do I show only Free Shipping?
+    https://woocommerce.com/document/hide-other-shipping-methods-when-free-shipping-is-available/
+
+11) all the hooks and filters 
+    https://adambrown.info/p/wp_hooks/hook
+
+12) Create theme online
+    https://underscores.me/
+
+13) for javascript exrcises:
+    https://www.teaching-materials.org/  ,  https://www.w3resource.com/javascript-exercises/
+
+14) swipper sliders using javascript:
+    https://stackoverflow.com/questions/64427698/how-can-i-center-items-fixed-width-swiper-slide-properly   , https://morioh.com/p/c1ab6c4e8c93
+
+15)counter numbers:
+   https://www.javatpoint.com/html-counter   ,  https://www.youtube.com/watch?v=Sv54eYCfDZc
+
+16)javascript note pdf:
+   https://matfuvit.github.io/UVIT/predavanja/literatura/TutorialsPoint%20JavaScript.pdf
+
+17)Bootstrap pdf:
+   https://www.tutorialspoint.com/bootstrap/bootstrap_tutorial.pdf
+
+18)signin form 
+   https://www.codingnepalweb.com/login-form-validation-in-html-javascript/
+
+19)sign up form
+   https://thehelpfultipper.com/how-to-build-a-sign-up-form-using-html-css-javascript/
+
+20) Chatgpt / openai
+    https://chat.openai.com/?model=text-davinci-002-render-sha
+    html refrence examples : https://codepen.io/
+
+21) numbers pattern javascript
+    https://www.tutorialstonight.com/number-pattern-programs-in-javascript
+
+22) for theory way learn :
+    https://www.phptpoint.com/javascript-switch/
+    https://www.javatpoint.com/javascript-function
+    https://tutorialsclass.com/learn/wordpress/
+
+23) choose colors:
+    htmlcolorcodes.com
+
+24) use datatable 
+    https://datatables.net/
+
+25) for jquery linkup
+    https://releases.jquery.com/
+
+26) date format 
+    https://www.php.net/manual/en/function.date.php
+
+27) date format solution
+    https://www.javatpoint.com/how-to-change-date-format-in-php
+
+28) photo editor 
+    https://pixlr.com/express/
+
+    //examples:  date is 9/5/2023
+
+   $newDate = date("d-m-Y", strtotime($row['leavedate']));
+   op: 09-05-2023
+
+    1] $newDate = date("F j, Y, g:i a", strtotime($row['leavedate']));
+    op: May 9, 2023, 12:00 am	
+
+    2] $newDate = date("m.d.y", strtotime($row['leavedate'])); 
+    op: 05.09.23
+ 
+    3] $newDate = date("j, n, Y", strtotime($row['leavedate']));
+    op: 9, 5, 2023
+  
+    4] $newDate = date("Ymd", strtotime($row['leavedate'])); 
+    op: 20230509	
+
+    5] $newDate = date('h-i-s, j-m-y, it is w Day', strtotime($row['leavedate']));      
+    op: 12-00-00, 9-05-23, 0031 0000 2 Tueam23
+
+    6] $newDate = date('\i\t \i\s \t\h\e jS \d\a\y.', strtotime($row['leavedate']));   
+    op: it is the 9th day.
+
+    7] $newDate = date("D M j G:i:s T Y", strtotime($row['leavedate']));   
+    op: Tue May 9 0:00:00 UTC 2023
+
+    8] $newDate = date('H:m:s \m \i\s\ \m\o\n\t\h', strtotime($row['leavedate']));   
+    op: 00:05:00 m is month
+
+    9] $newDate = date("Y-m-d H:i:s", strtotime($row['leavedate']));   
+    op: 2023-05-09 00:00:00
+    
+28] Ajax crud table using jquery
+    https://www.fundaofwebit.com/post/php-ajax-crud-operations-without-page-reload-using-jQuery-Ajax-mySQL
+
+29] php all types of table 
+    https://www.fundaofwebit.com/php-solutions 
+
+30] PHP Admin Panel
+    https://www.youtube.com/watch?v=IqrBr-KT5qk&list=PLRheCL1cXHrvTkUenAc5GdEvqIpVX-2JJ
+
+31] php crud full / ajax / e-commerce
+    https://www.youtube.com/watch?v=JtG3bb6scEE&list=PL0b6OzIxLPbzXPdt9pKeQXm6NoPA9MdKW
+
+32] encapsulation video for oop concept                 polymorphism
+    https://www.youtube.com/watch?v=ABkuEePN9XI         https://www.youtube.com/watch?v=79PTx4ivZBo
+
+33] for oops conecept programs practise
+    https://phpenthusiast.com/object-oriented-php-tutorials/create-classes-and-objects/practice
+
+34] complete e-shopping website using php mysql oop
+    https://www.youtube.com/watch?v=KLWA2vCERSQ
+
+34] dropdown in php
+    https://rathorji.in/p/multiple_select_dropdown_get_values_in_php
+
+35] ajax 
+    https://www.studentstutorial.com/ajax/pagination
+
+
+-----------------------------------------------------------Wordpress-------------------------------------------------------------------------------------
+
+35] wordpress style.css file 
+    https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+36] wordpress all functions / All hooks
+    https://developer.wordpress.org/reference/functions/
+    https://adambrown.info/p/wp_hooks/hook
+
+37] jQuery
+    https://jqueryui.com/
+
+38] list of template tags in wordpress development
+    https://developer.wordpress.org/themes/references/list-of-template-tags/
+
+39] action_references
+    https://codex.wordpress.org/Plugin_API/Action_Reference
+
+40] filter_references
+    https://codex.wordpress.org/Plugin_API/Filter_Reference
+
+41] Plugin development
+    https://github.com/zgordon/wp-dev-course/tree/master/6%20-%20Plugin%20Development
+
+42] learn videoes
+    https://www.youtube.com/watch?v=IrFe6WGwQAo&list=PL6Kd_lvAfBuYzxHmbOdoXjBuW6pFs_xja&index=2
+
+    https://developer.wordpress.org/plugins/plugin-basics/    (   learn theory way )
+
+43] generator
+    https://www.wp-hasty.com/
+
+44] dropdown menu
+    https://bootstrapfriendly.com/blog/live-preview/how-to-create-draggable-droppable-and-sortable-menu-using-jquery-ui
+    https://nadjmandev.com/create-sortable-drag-and-drop-multi-level-list-with-jquery-like-wordpress-menu-page/
+    https://jsfiddle.net/dekkard/uh5eL5sc/
+
+45] custom-post type
+    video -> https://www.youtube.com/watch?v=pRVghkqp-Rw
+    with theory -> https://www.elegantthemes.com/blog/tips-tricks/the-wordpress-loop-explained-for-beginners
+
+46] recptcha site key -> 6LcFzVsnAAAAAEjAeFkPXDelB4tjouS5RkTOONay
+    recptcha secret key -> 6LcFzVsnAAAAAPLYc75lX_8TOPBQGw41fP-j5xik
+    recaptcha vide used and chatgpt used for response -> https://www.youtube.com/watch?v=tmMG7_LcQHc
+
+    check table : https://staging.alloxesinfotech.com/job-salary-statistics/salary-data/?city=DD&job_title=DD
+
+    user : Alloxes
+
+    pass: 4wH)WpAq9GBLlSPq2Z
+
+47] for design template 
+    https://nicepage.com/html-templates/preview/the-creative-agency-for-your-next-big-thing-4753423?device=desktop
+
+48] tooltip 
+    https://stackoverflow.com/questions/44499684/how-do-i-create-a-tooltip-in-css-that-works-for-both-long-and-short-content
+
+49] wordpress easy code generator 
+    https://wp-skills.com/tools/
+
+50 ] contact form 7 showing data
+     database addon - cfdb7  
+
+51 ] woocommerce product wishlist button plugin
+     TI wishlist 
+
+52]  jpg to txt file converter
+     https://www.freeconvert.com/convert/image-to-text/download
+
+-----------------------------------------------------------------extra----------------------------------------------------------
+*  Leave req
+   https://www.naukri.com/blog/one-day-leave-application/#onedayleaveapplicationpersonal

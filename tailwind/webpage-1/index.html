@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="flex w-full justify-between px-[5vw] align-middle h-[90px] items-center border-b-2 border-[#dfdad878]">
+            <div class="logo w-[10vw] flex ">
+                <img src="logo.svg" class="px-[10px]">
+                <h1 class="logoname text-3xl font-bold">Flora</h1>
+            </div>
+            <nav class="nav-link xl:w-[25vw] lg:w-[35vw] justify-between lg:flex align-middle text-[17px] hidden">
+                <a href="#" class="text-[#CBC9C8]">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <div class="btns flex items-center gap-6">
+            <div class="downloadbtn xl:w-[15vw] lg:w-[19vw] h-12 border-solid border-black border-2  items-center flex justify-center rounded-full pl-2 bg-black md:pr-2 lg:pr-0 md:flex hidden sm:hidden" >
+                <button class="dbtn px-1.5 text-white font-bold text-[17px]">Download Now</button>
+                <a href="#"><i class="fa-solid fa-download w-9 h-9 border-solid items-center flex justify-center rounded-full bg-[#C0FE66] ml-2 "></i></a>
+            </div>
+            <div class="toggle lg:hidden md:flex rounded-full border-black border-[1px] p-3 md:py-4 text-[25px] sm:w-[61px] text-center flex items-center">
+                <i class="fa-solid fa-bars menu sm:px-2"></i>
+            </div>
+        </div>
+
+    </header>
+    <nav class="nav-link xl:w-[25vw] lg:w-[35vw] justify-around lg:hidden align-middle text-[17px] flex flex-col bg-black text-white h-[250px] text-[23px] p-5 nav-mob ">
+        <a href="#" class="text-[#CBC9C8]">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Us</a>
+        <div class="downloadbtn w-[195px] h-[70px] border-solid border-white border-2  items-center flex  rounded-full pl-2 bg-white md:pr-2 lg:pr-0 md:flex my-7 md:hidden" >
+            <button class="dbtn px-1.5 text-black font-bold text-[17px]">Download Now</button>
+            <a href="#"><i class="fa-solid fa-download w-9 h-9 border-solid items-center flex justify-center rounded-full bg-[#C0FE66] ml-2 text-black text-[15px]"></i></a>
+        </div>
+    </nav>
+
+       <!-- Hero Section -->
+       <section class="bg-white py-20 lg:px-[70px] px-4">
+        <div class="container mx-auto lg:px-4 flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 text-left mb-8 lg:mb-0 pr-4">
+                <h1 class="text-[40px] md:text-[50px] lg:text-[70px] font-bold mb-1 leading-tight lg:leading-[80px] lg:pr-[0px] pr-[100px] lg:pl-[0px] pl-[30px]">Manage your finance easily with Flora.</h1>
+                <p class="text-gray-700 my-[30px] lg:pr-[0px] pr-[170px] lg:pl-[0px] pl-[30px]">Carry your bank in your pocket with the easiest and most secure mobile banking app you'll.</p>
+                <div class="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:pl-[0px] pl-[30px]">
+                    <button class="bg-black text-white px-6 py-2 rounded-[50px] hover:bg-gray-800 flex items-center space-x-2 ">
+                        <img src="assets/appstore.png" class="w-[40px] h-[40px]">
+                        <div class="flex flex-col items-start">
+                            <span>Download on the</span>
+                            <span class="text-[19px]">App Store</span>
+                        </div>
+                    </button>
+                    <button class="bg-black text-white px-6 py-2 rounded-[50px] hover:bg-gray-800 flex items-center space-x-2">
+                        <img src="assets/googleplay.png" class="w-[40px] h-[40px]">
+                        <div class="flex flex-col items-start">
+                            <span>Get it on</span>
+                            <span class="text-[19px]">Google Play</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <div class="relative w-[80%] md:w-[60%] lg:w-full bg-[url('assets/herobg.png')] bg-contain bg-center bg-no-repeat flex justify-center">
+                    <img src="assets/hero.png" alt="Hero Image" class="relative w-[200px] md:w-[700px] lg:w-[387px] h-auto rounded-t-md md:pt-[30px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Reviews Section -->
+        <section class="bg-gray-50 py-12">
+            <div class="container mx-auto px-4 bg-[#F5F5F5]">
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0 md:space-x-4 bg-[#F5F5F5]">
+                    <!-- Review 1 -->
+                    <div class="flex flex-col items-center  p-6 rounded-lg bg-[#F5F5F5] w-full md:w-1/3">
+                        <img src="assets/stars.svg" class="py-[20px]">
+                        <div class="flex items-center mb-2">
+                            <span class="text-xl font-semibold mr-2">4.6/5</span>
+                            <span>(From 600+ reviews)</span>
+                        </div>
+                        <img src="assets/captera.png" alt="Capterra" class="h-12">
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="flex flex-col items-center  p-6 rounded-lg  w-full md:w-1/3">
+                        <img src="assets/stars.svg" class="py-[20px]">
+                        <div class="flex items-center mb-2">
+                            <span class="text-xl font-semibold mr-2">4.6/5</span>
+                            <span>(From 600+ reviews)</span>
+                        </div>
+                        <img src="assets/g2.svg" alt="G2" class="h-12">
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="flex flex-col items-center  p-6 rounded-lg  w-full md:w-1/3">
+                        <img src="assets/stars.svg" class="py-[20px]">
+
+                        <div class="flex items-center mb-2">
+                            <span class="text-xl font-semibold mr-2">4.6/5</span>
+                            <span>(From 600+ reviews)</span>
+                        </div>
+                        <img src="assets/trustpilot.svg" alt="Trustpilot" class="h-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Features Section -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-[50px] md:p-0 lg:px-[240px] font-bold mb-8">Unleash the true potential for next-gen banking.</h2>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0 md:space-x-4 px-[50px]">
+                    <!-- Feature 1 -->
+                    <div class="flex flex-col items-start bg-yellow-200 py-[45px] px-[35px] rounded-lg shadow-md w-full md:w-1/3">
+                        <div class="bg-white p-3 rounded-full mb-4">
+                            <img src="assets/transition.svg" alt="Easy Transaction" class="h-[50px] w-[50px]">
+                        </div>
+                        <h3 class="text-[25px] font-bold mb-2">Easy Transaction</h3>
+                        <p class="text-gray-700 mb-4 text-left text-[20px]">We perform diligence guarantee the best financing and financial plan your depl anywhere.</p>
+                        <button class="bg-black text-white py-2 px-[40px] rounded-[50px] hover:bg-gray-800 my-[20px]">Learn More</button>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex flex-col items-start bg-[#BDB8FF] py-[45px] px-[35px] rounded-lg shadow-md w-full md:w-1/3">
+                        <div class="bg-white p-3 rounded-full mb-4">
+                            <img src="assets/convert.svg" alt="Easy Transaction" class="h-[50px] w-[50px]">
+                        </div>
+                        <h3 class="text-[25px] font-bold mb-2">Convert Currency</h3>
+                        <p class="text-gray-700 mb-4 text-left text-[20px]">We perform diligence guarantee the best financing and financial plan your depl anywhere.</p>
+                        <button class="bg-black text-white  py-2 px-[40px] rounded-[50px] hover:bg-gray-800 my-[20px]">Learn More</button>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col items-start bg-[#FFD5CA] py-[45px] px-[35px] rounded-lg shadow-md w-full md:w-1/3">
+                        <div class="bg-white p-3 rounded-full mb-4">
+                            <img src="assets/security.svg" alt="Easy Transaction" class="h-[50px] w-[50px]">
+                        </div>
+                        <h3 class="text-[25px] font-bold mb-2">Advanced Security
+                        </h3>
+                        <p class="text-gray-700 mb-4 text-left text-[20px]">We perform diligence guarantee the best financing and financial plan your depl anywhere.</p>
+                        <button class="bg-black text-white  py-2 px-[40px] rounded-[50px] hover:bg-gray-800 my-[20px]">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    
+
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-4 lg:px-20">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-1/2 flex justify-center lg:justify-start">
+                        <div class="relative w-[80%] md:w-[60%] lg:w-full  flex justify-start">
+                            <img src="assets/mobile.png" alt="Hero Image 2" class="relative w-[200px] md:w-[300px] lg:w-[487px] h-auto rounded-t-md">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 text-left mb-8 lg:mb-0 pr-4 lg:ml-[10%] md:ml-0 ">
+                        <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-1 leading-tight lg:leading-[70px]">Management of bills and reminders.</h2>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-[15px]">
+                            <li class="text-[22px] text-black font-bold">Natural Ingredients <p class="py-[10px] text-[17px] font-light">With all your data one place, track multiple systems deadlines customize with haveing collaborate</p></li>
+                            <li class="text-[22px] text-black font-bold">Perfect every season <p class="py-[10px] text-[17px] font-light">With all your data one place, track multiple systems deadlines customize with haveing collaborate</p></li>
+                        
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-4 lg:px-20">
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between">
+                    <div class="lg:w-1/2 text-left mb-8 lg:mb-0 pr-4 ">
+                        <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-1 leading-tight lg:leading-[70px]">Achieve your savings goals with Flora.</h2>
+                        <p class="text-gray-700 my-[20px]">View your balance, set up recurring payments and do so much more—all from one intuitive dashboard.</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Your Friendly Support Squad</li>
+                            <li>Quick setup and verification</li>
+                            <li>Tailored for Your Business</li>
+                            <li>Team Collaboration Made Easy</li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                        <div class="relative w-[80%] md:w-[60%] lg:w-full  flex justify-center">
+                            <img src="assets/mobile.png" alt="Hero Image 2" class="relative w-[200px] md:w-[300px] lg:w-[487px] h-auto rounded-t-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Features Section 2 -->
+        <section class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4 lg:px-20 text-center">
+                <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-8 leading-tight lg:leading-[70px]">Flora just makes mobile banking easier.</h2>
+                <div class="flex flex-wrap justify-center space-y-8 lg:space-y-0 lg:space-x-8">
+                    <div class="bg-white p-6 rounded-lg w-full lg:w-1/4 flex items-center justify-center">
+                        <img src="assets/mb.svg" class="w-12 h-12 mr-4">
+                        <div>
+                            <h3 class="font-bold">Deploy faster together</h3>
+                            <p class="text-gray-700">Join our community of forward-thinkers and never miss an update.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg w-full lg:w-1/4 flex items-center justify-center">
+                        <img src="assets/mb.svg" class="w-12 h-12 mr-4">
+                        <div>
+                            <h3 class="font-bold">Auto Staking</h3>
+                            <p class="text-gray-700">Join our community of forward-thinkers and never miss an update.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg w-full lg:w-1/4 flex items-center justify-center">
+                        <img src="assets/mb.svg" class="w-12 h-12 mr-4">
+                        <div>
+                            <h3 class="font-bold">Beautiful No-Code</h3>
+                            <p class="text-gray-700">Join our community of forward-thinkers and never miss an update.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Integration Section -->
+        <section class="bg-black text-white py-20">
+            <div class="container mx-auto px-4 lg:px-20 text-center">
+                <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-8 leading-tight lg:leading-[70px]">Integrated with more than applications you love</h2>
+                <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-8">
+                    <img src="assets/person1.png" class="w-[200px] md:w-[300px] lg:w-[387px] h-auto rounded-t-md mb-8 lg:mb-0">
+                    <div class="text-left max-w-lg">
+                        <p class="text-[#C0FE66] font-bold ">★★★★★</p>
+                        <p class="my-4 text-[25px]">“The ability to make secure and quick international payments is very important thanks for any organisation that can take its growth seriously. We’re has completing 139%”</p>
+                        <p class="font-bold text-[20px]">David Henricks, Web Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Articles Section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-1 lg:px-5 text-center">
+                <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-8 leading-tight lg:leading-[70px]">Discover our latest articles and insights</h2>
+                <div class="flex flex-wrap justify-center space-y-8 lg:space-y-0 lg:space-x-3 w-[100%] ">
+                    <div class="bg-gray-100 p-6 rounded-lg w-full lg:w-1/4 text-left">
+                        <img src="assets/one.jpg" class="w-full h-60 object-cover mb-4 rounded-t-md">
+                        <p class="text-gray-500">April 26, 2024</p>
+                        <h3 class="font-bold my-2">Mastering your Money: A Step-by-Step guide to financial.</h3>
+                        <a href="#" class="text-black font-bold">Learn more →</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg w-full lg:w-1/4 text-left">
+                        <img src="assets/two.jpg" class="w-full h-60 object-cover mb-4 rounded-t-md">
+                        <p class="text-gray-500">September 14, 2024</p>
+                        <h3 class="font-bold my-2">From doorstep to destination: The evolution of delivery.</h3>
+                        <a href="#" class="text-black font-bold">Learn more →</a>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg w-full lg:w-1/4 text-left">
+                        <img src="assets/three.jpg" class="w-full h-60 object-cover mb-4 rounded-t-md">
+                        <p class="text-gray-500">May 18, 2023</p>
+                        <h3 class="font-bold my-2">From A to B: The ultimate guide to package delivery.</h3>
+                        <a href="#" class="text-black font-bold">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Call to Action Section -->
+        <section class="bg-lime-500 py-20">
+            <div class="container mx-auto px-4 lg:px-20 text-center">
+                <h2 class="text-[40px] md:text-[50px] lg:text-[60px] font-bold mb-8 leading-tight lg:leading-[70px]">Start your online banking with the applications.</h2>
+                <p class="text-gray-700 my-[20px]">View your balance, set up recurring payments and do so much more—all from one intuitive dashboard.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-black text-white px-6 py-2 rounded-[50px] hover:bg-gray-800 flex items-center space-x-2">
+                        <img src="assets/appstore.png" class="w-[40px] h-[40px]">
+                        <div class="flex flex-col items-start">
+                            <span>Download on the</span>
+                            <span class="text-[19px]">App Store</span>
+                        </div>
+                    </button>
+                    <button class="bg-black text-white px-6 py-2 rounded-[50px] hover:bg-gray-800 flex items-center space-x-2">
+                        <img src="assets/googleplay.png" class="w-[40px] h-[40px]">
+                        <div class="flex flex-col items-start">
+                            <span>Get it on</span>
+                            <span class="text-[19px]">Google Play</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer class="bg-white py-10">
+            <div class="container mx-auto px-4 lg:px-20 text-center lg:text-left">
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:space-x-8">
+                    <div class="mb-8 lg:mb-0">
+                        <img src="assets/flogo.png" class="w-[150px] h-auto mb-4 lg:mb-0">
+                        <p class="text-gray-700">View your balance, set up recurring payments and do so much more.</p>
+                        <div class="flex justify-center lg:justify-start space-x-4 mt-4">
+                            <a href="#"><img src="assets/fb.svg" class="w-12 h-12"></a>
+                            <a href="#"><img src="assets/insta.svg" class="w-12 h-12"></a>
+                            <a href="#"><img src="assets/twitter.svg" class="w-12 h-12"></a>
+                            <a href="#"><img src="assets/linkedin.svg" class="w-12 h-12"></a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row lg:space-x-8 text-gray-700">
+                        <div>
+                            <h3 class="font-bold mb-2">Sections</h3>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-black">Homepage</a></li>
+                                <li><a href="#" class="hover:text-black">About us</a></li>
+                                <li><a href="#" class="hover:text-black">Blog</a></li>
+                                <li><a href="#" class="hover:text-black">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Template</h3>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-black">Style Guide</a></li>
+                                <li><a href="#" class="hover:text-black">Licenses</a></li>
+                                <li><a href="#" class="hover:text-black">Changelog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Contact Us</h3>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:text-black">flora11@gmail.com</a></li>
+                                <li><a href="#" class="hover:text-black">+999-234-324</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-8">&copy; All rights reserved Themeflow. Powered by Webflow.</p>
+            </div>
+        </footer>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".nav-mob").hide()
+        $(".menu").click(function(){
+          $(".nav-mob").slideToggle()
+          $(".menu").toggleClass("fa-bars fa-xmark")
+        })
+    })
+</script>
+</html>

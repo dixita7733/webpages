@@ -1,0 +1,205 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    max-width: 100%;
+    align-items: center;    padding-top: 26px;
+    padding-bottom: 25px;
+}
+.headnav .nav-link{
+    display: flex;
+    width: 35vw;
+    justify-content: space-around;
+}.nav-link li a{
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: black;
+}.nav-link li{
+    list-style: none;
+}.headnav{
+    display: flex;
+}.iconmenu{
+    display: none;
+}.box1{
+    height: 400px;
+    width: 30%;
+    border: 1px solid black;
+}.logo {
+    width: 225px;
+    display: flex;
+    justify-content: end;
+}.banner{
+    background-image: url(h1_hero1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6%;
+    gap: 15px;
+    width: 100%;
+
+}.bsubhead{
+    font-size: 2vw;
+    color: white;
+}.bhead{
+    font-size: 5vw;
+    color: white;
+}.bcontent{
+    font-size: 1.5vw;
+    color: white;
+    width: 45vw;
+    letter-spacing: 1px;
+}.bbtn{
+    background-color: #007A5C;
+    color: white;
+    font-size: 1.7vw;
+    width: 15vw;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}.about{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FCF2EB;
+    padding: 70px 0px;
+}.aright{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}.arhead{
+    margin-bottom: 10px;
+    font-size: 3vw;
+}.acontent{
+    margin-bottom: 10px;
+    font-size: 1.5vw;
+}.aleft{
+   width: 40vw;
+}.aboutleft{
+    width: 100%;
+}.story{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 70px;
+}.sone{
+    width: 30%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}.simg{
+    width: 100%;
+    margin-bottom: 15px;
+}.headstory{
+    font-size: 3vw;
+    text-align: center;
+    margin: 45px;
+    font-weight: 900;
+}.scontent{
+    width: 100%;
+    text-align: center;
+    font-size: 1.7vw;
+    padding-bottom: 15px;
+}.site-footer{
+    background-color: #32404D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px;
+}.foothr{
+    color: rgb(51, 50, 50);
+}.fnav-link li a{
+    text-decoration: none;
+    color: white;
+    font: 1.5vw;letter-spacing: 1px;
+}.fnav-link{
+    display: flex;
+    width: 30vw;    
+    justify-content: space-around;
+    gap: 10px;
+}.fnav-link li{
+    list-style: none;
+}.copy{
+    color: rgb(152, 151, 151);
+    font-size: 1vw;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    .iconmenu{
+        display: block;        margin-right: 17px;
+    }.headnav .nav-link{
+        display: none;
+    }.logo {
+        width: 165px;
+        display: flex;
+        justify-content: center;
+    }img.headlogo {
+        height: 40px;
+    }.bbtn{
+        width: 25vw;
+    }.banner{
+        height: 50vw;
+    }.about{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }#aboutnotreverse{
+        flex-direction: column;
+    }.aleft{
+        width: 90%;
+        margin-bottom: 20px;
+     }.aright{
+        width: 90%;
+     }.sone{
+        width: 90%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }.story{
+       align-items: center;
+       gap: 30px;
+        flex-direction: column;
+    }.fnav-link{
+        flex-direction: column;
+        width: 30vw;    
+        justify-content: center;
+        align-items: center;
+    }.site-footer{
+        gap: 30px;
+    }
+}
+@media (min-width: 431px) and (max-width: 980px){
+    .iconmenu{
+        display: block;        margin-right: 17px;
+    }.headnav .nav-link{
+        display: none;
+    }
+    .logo {
+        width: 186px;
+        display: flex;
+        justify-content: center;
+    }img.headlogo {
+        height: 40px;
+    }.bbtn{
+        width: 25vw;
+    }.banner{
+        height: 60vw;
+    }.fnav-link{
+        width: 40vw;    
+    }.site-footer{
+        gap: 30px;
+    }
+}
+@media (min-width: 981px) and (max-width: 1400px){
+    .iconmenu{
+        display: none;
+    }
+}

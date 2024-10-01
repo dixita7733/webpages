@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: arial}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+.nav-link li{
+    list-style: none;
+    margin-right: 20px;
+}.nav-link ul{
+    display:flex;
+}.nav-link li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}.login{
+   display: flex;
+   align-items: center;
+}.user{
+    margin-right: 10px;
+}.login a{
+    text-decoration: none;
+    color: black;}
+.banner{
+    height: 700px;
+    background-image: url(bgimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}.bparagraph{
+    font-size: 18px;letter-spacing: 2px;margin-bottom: 15px;
+}.bhead{
+    font-size: 125px;
+    letter-spacing: 15px;margin-bottom: 15px;
+}.blastp{
+    font-size: 23px;letter-spacing: 2px; font-weight: 100;margin-bottom: 50px;color:rgba(0, 0, 0, 0.808)
+}.bbtn{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 30px;
+}.about{
+    display: flex;
+    align-items: center;
+}.left{
+    align-items: center;
+    padding: 0px 80px;
+    margin-left: 90px
+}.ahr{
+    width: 40px;
+    margin: 10px 10px;
+    font-weight: 800px; 
+}.ahead{
+    font-size: 50px; letter-spacing: 3px;
+}.aparagraph{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-size: 15px;
+    letter-spacing: 2px;line-height: 23px;
+}.rimg{
+    height: 700px;
+    width: 700px;
+}.abtnsec{
+    margin: 25px 0px;
+}.readbtn{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin-right: 10px;border: 2px solid black;
+}.readbtn:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: black;    
+
+}.conbtn{
+    border: 2px solid black;
+    padding: 10px 20px;
+    color: black;
+}.abtnsec a{
+    text-decoration: none;
+}.help{
+    background-image: url(helpbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}.top{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}.hhr{
+
+    width: 50px;
+    margin: 30px 200px;
+}.hhead{
+    margin-left: 195px;
+    font-size: 50px;
+    margin-bottom: 20px;font-weight: 800;
+}.middle{
+    display: flex;
+    justify-content: center;
+    margin: 20px 50px;
+}.box1{
+    border: 5px solid black;
+    margin-right: 20px;
+    display: block;
+    height: 460px;
+    padding: 50px 20px;
+    width: 300px;    text-align: center;
+
+}.mparagraph{
+    padding: 30px 30px;
+}.hbr{
+    width: 50px;
+}.min{
+    border-top: 2px solid black;
+    padding-top: 25px;
+    padding-bottom: 130px;
+}.end{
+   width: 100%;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}.bbtn1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    margin: 70px 0px;
+    width: 190px;
+}footer{
+    display: flex;
+    padding: 60px 0px;
+    justify-content: space-evenly;background-color: skyblue;
+}.foohead{
+    letter-spacing: 2px;
+}.fhr{
+    width: 35px;
+    margin-bottom: 15px;
+}.add{
+    line-height: 25px;
+}.social{
+    margin: 25px 0px;
+}.footright .fool{
+    font-size: 17px;
+    letter-spacing: 1px;
+}.footright .infoo{
+    background-color: skyblue;
+    border: 1px solid black;
+    width: 400px;
+    height:30px;
+    margin-top: 10px;margin-bottom: 20px;
+}.foobtn{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    width: 190px;
+    margin-left: 210px;
+}.msg{
+    background-color: skyblue;
+    border: 1px solid black;
+    width: 400px;
+    margin-top: 10px;margin-bottom: 20px;
+}
+

@@ -1,0 +1,106 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    width: 100%;
+    align-items: center;    padding-top: 26px;
+}
+.headnav .nav-link{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+}.nav-link li a{
+    text-decoration: none;
+    color: black;
+}.nav-link li{
+    list-style: none;
+}.headnav{
+    display: flex;
+}.iconmenu{
+    display: none;
+}.box1{
+    height: 400px;
+    width: 30%;
+    border: 1px solid black;
+}.banner{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}.logo {
+    width: 225px;
+    display: flex;
+    justify-content: end;
+}#bigbox1{
+    background-image: url(img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}#bigbox2{
+    background-image: url(images2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}#bigbox{
+    background-image: url(images3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+    .iconmenu{
+        display: block;        margin-right: 17px;
+    }.headnav .nav-link{
+        display: none;
+    }.banner{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }.box1{
+        height: 200px;
+        margin-top: 20px;
+        width: 90%;
+        border: 1px solid black;
+    }.logo {
+        width: 165px;
+        display: flex;
+        justify-content: center;
+    }img.headlogo {
+        height: 40px;
+    }
+}
+@media (min-width: 421px) and (max-width: 980px){
+    .iconmenu{
+        display: block;        margin-right: 17px;
+    }.headnav .nav-link{
+        display: none;
+    }
+    #bigbox{
+        width: 100%;
+        margin: 4%;
+    }.box1 {
+        height: 300px;
+        width: 44%;
+        border: 1px solid black;
+        /* margin: 16px 20px; */
+    }.logo {
+        width: 186px;
+        display: flex;
+        justify-content: center;
+    }img.headlogo {
+        height: 40px;
+    }
+}
+@media (min-width: 981px) and (max-width: 1400px){
+    .iconmenu{
+        display: none;
+    }
+}

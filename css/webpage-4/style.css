@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c6dfeb;
+    height: 70px
+}.logoname{
+  font-size: 30px;
+}.nav-link li{
+    display: inline;
+    justify-content: space-between;
+    margin-right: 25px;
+    font-size: 20px;
+}.nav-link li a{
+    text-decoration: none;
+    color: #143a51;
+}.soimg{
+    margin-left: 10px;
+}.border{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    margin: 50px 50px;
+ }
+ .bimg{
+    margin-top: -52px;
+ }.b1{
+    font-size: 80px;
+    text-align: center;
+ }.bbtn1{
+    background-color: #ff5d68;
+    color: white;
+    padding: 15px 45px;
+    margin-right: 20px;
+    text-decoration: none;
+ }
+ .bbtn2{
+    background-color: #143a51;
+    color: white;
+    padding: 15px 45px;
+    margin-right: 20px;
+    text-decoration: none;
+ }.bbtn{
+    text-align: center;
+ }.category{
+    background-color: #143a51;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+ }.cahead{
+    font-size: 30px;
+    color: white;
+ }.ca-list{
+    display: flex;
+}.caname{
+    list-style: none;
+    margin-right: 20px;
+    font-size: 20px;
+}.caname a{
+    text-decoration: none;
+    color: white
+}
+.mwc, .mwcpart{
+    display: flex;
+    justify-content: space-evenly;
+}.mwcsec1{
+    border: 1px solid black;
+    display: block;
+    align-items: center;
+    width: 400px;
+    padding: 20px 20px;
+}
+.mwchead{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;margin-top: 20px;
+}.mwcimg{
+    height: 300px;
+    width: 250px;
+    margin: 10px 65px;
+}.mwcprice{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}.mwcbtn{
+    background-color: #ff5d68;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+}.price{
+    font-size: 20px;
+    color: #ff5d68;
+    font-weight: 700;
+}.mainhead{
+    margin: 80px 0px;
+    text-align: center;
+}.mwcsec{
+    display: block;
+    align-items: center;
+    width: 400px;
+    padding: 20px 20px;
+}.mwcpart{
+    border: 1px solid black;
+    margin: 50px 50px;
+}.btnofsec{
+    text-align: center;
+    margin: 40px 0px;
+}.manclothes{
+    display: flex;
+    border: 1px solid black;
+    margin: 50px 50px;
+    align-items: center;
+
+}.womanclothes{
+    display: flex;
+    margin: 50px 50px;
+    align-items: center;
+}.maleft{
+    padding-left: 60px;
+}img.maimg {
+    height: 325px;
+    width: 600px;
+}.wmaimg{
+    height: 325px;
+    width: 600px;
+    margin-left: 90px;
+}.mahead{
+    font-size: 30px;
+}.maparagraph{
+    padding-right: 200px;
+    font-size: 18px;
+}.wmahead{
+    font-size: 60px;
+}
+
+
+.faparagraph{
+    line-height: 25px;
+}.fhead{
+    font-size: 25px;
+    margin-bottom: 15px;;
+}.fmenu{
+    list-style: none;
+    line-height: 25px;
+}.menu, .fabout{
+    margin-left: 70px;
+}.copy{
+    background-color: #143a51;
+    text-align: center;
+}.copyhr{
+    display: center;
+    justify-content: center;
+    text-align: center;
+}.copyparagraph{
+    text-align: center;
+    padding: 10px 0px;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+    line-height: 22px;
+    color: white
+}
+.footer{
+    margin-top: 40px;
+   background-color: #143a51;
+   display: flex;
+   justify-content: center;
+
+   
+}footer{
+    height: 200px;
+}.fabout, .menu, .link, .contact{
+    width: 250px;
+    text-align: left;
+    align-items: center;
+    padding: 70px 0px;
+    color: white;
+}.logofooter{
+    padding: 140px 0px;
+    color: white;
+    margin-left: 60px;
+}

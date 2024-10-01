@@ -1,0 +1,24 @@
+@media (max-width: 575.98px) {
+    .sec_1{
+        padding: 10%;
+    } 
+    .sec_1 .heading h2{
+        font-size: 40px;
+    }
+    .sec_1 .heading p{
+        font-size: 15px;
+    }
+     .image{
+        height: 100%;
+        width:100%;
+     }
+     .sec_5 .title .btn,
+ .sec_5 .title .btn1{
+    margin: 10px;
+}
+.footer .logo img{
+    height: 100%;
+    width: 100%;
+}
+
+}

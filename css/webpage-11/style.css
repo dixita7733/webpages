@@ -1,0 +1,249 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.top-header {
+    display: flex;
+    background-color: #82AE46;
+    justify-content: space-around;
+    height: 30px;
+    align-items: center;
+}
+
+.top-header a{
+    text-decoration: none;    color: white; font-size: 13px;
+}.top-header a i{
+    margin-right: 9px;
+}
+.bottom-header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+    align-items: center;
+    margin-right: 50px;
+    height: 67px;
+}
+.nav-link{
+    display: flex;
+}
+
+.nav-link li{
+    list-style: none;    padding-right: 25px;
+}
+.nav-link li a{
+    text-decoration: none;
+    color: black;letter-spacing: 1px;font-size: 15px;
+}.logoname{
+    font-size: 23px;
+    font-weight: 900;
+    margin-left: 70px;
+    color: #82AE46;
+}
+.banner-container{
+    background-image: url(bannerbg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.bhead{
+    font-family: "Playwrite NZ", cursive;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 900;
+}.bcontent{
+    font-size: 18px;
+    color: aliceblue;
+    letter-spacing: 1px;
+    padding: 10px 0px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}.bbtn{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #82AE46;
+    font-weight: 700;
+}.service-container{
+    display: flex;
+    justify-content: space-around;
+}.sicon{
+    margin-top: 50px;
+    background-color: rgb(247, 131, 247);
+    border-radius: 350px;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}.fas {
+    font-weight: 900;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    left: 35px;
+    top: 35px;
+}.part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.shead{
+    padding-bottom: 10px;font-size: 17px;
+}.part-one {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}h3.cathead {
+    font-size: 25px;
+    text-align: center;
+    color: #85B04A;
+    font-family: "Playwrite NZ", cursive;
+    margin-bottom: 20px;
+}p.catcontent {
+    font-size: 14px;
+    margin-bottom: 28px;
+}.avbtn{
+    margin-left: 20px;
+}.part-two {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-inline: 70px;
+}.psubhead{
+    font-size: 17px;
+    text-align: center;
+    color: #85B04A;
+    font-family: "Playwrite NZ", cursive;
+    margin-bottom: 15px;
+}.phead{
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    margin-bottom: 15px;
+}.products{
+    margin-top: 100px;
+}.pcontent{
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+}.pricesec{
+    display: flex;
+}.secp1{
+    box-shadow: 2px 2px 2px 2px rgb(154, 154, 154);
+}.secarea{
+    display: flex;
+}.secarea {
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 87px;
+    margin-top: 60px;
+}p.proname {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}.pricesec {
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 23px;
+    margin: 18px;
+}.price{
+    color: #85B04A;
+    font-weight: 600;
+}.proimg:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}.profimg:hover{
+    height: 202px;
+    overflow: hidden;
+}
+/* }.vegfcaption{
+    height:250px;
+    background-color: black;
+    opacity: 0.5;
+    color: white;display: flex;flex-direction: column;justify-content: center;align-items: center;position: absolute;
+}.vegfig{
+    overflow: hidden;
+}.cat1{
+    overflow: hidden;
+    position: relative;
+} */
+
+.vegfig:hover .cat1{
+    transform: scale(1.5);
+    transition: 2s;
+}.vegfig{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+}.vegfcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    height: 250px;
+    width: 350px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}.vegfig:hover .vegfcaption{
+    opacity: 0.5;     background-color: black;
+    transform: scale(1.5);
+    transition: 2s;
+
+}.newsl{
+    background-color: #e7e5e5b7;
+    padding-inline: 40px;
+    margin: 80px 0px;
+}.news-container{
+    display: flex;
+    justify-content: space-around;    align-items: center;
+    height: 120px;
+}.nhead{
+    margin-bottom: 15px;
+}.ebtn{
+    background-color: #82AE46;
+    padding: 10px 15px;
+    margin-left: -7px;
+    border: none;
+}
+input[type="email"] {
+    padding: 10px 15px;border: none;
+}
+.foot-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 130px;
+    align-items: center;
+    padding-bottom: 50px;
+}.foocontent{
+    width: 250px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}.foo-link{
+    margin-top: 15px;
+
+}.foo-link li{
+    list-style: none;
+}.foo-link li a{
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+}
+
+
+
