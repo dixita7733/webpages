@@ -1,39 +1,453 @@
-<!-- https://www.wix.com/website-template/view/html/1734?originUrl=https%3A%2F%2Fwww.wix.com%2Fwebsite%2Ftemplates&tpClick=view_button&esi=39a881d9-fd20-4555-8304-2a6fc7558abc  -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fixed navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- icon  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- slider  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- fontawessame  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- animation  -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- wow  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg bg-light" id="header1">
+        <div class="w-25 d-flex justify-content-center h-100 ">
+            <img src="image/logo (3).png" class="navbar-brand">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active  fs-5" style="color: rgb(4, 15, 46);" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link ps-5 fs-5" style="color: rgb(4, 15, 46);" href="#">About</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link ps-5 fs-5" style="color: rgb(4, 15, 46);" href="#" role="button"  aria-expanded="false">
+                  Properties
+                </a>
+               
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link fs-5 ps-5  dropdown-toggle" style="color: rgb(4, 15, 46);"data-bs-toggle="dropdown">Blog</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Actio</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link fs-5 ps-5 " style="color: rgb(4, 15, 46);">Contact</a>
               </li>
+              <i class="bi bi-search mt-1 ms-3 fs-4"></i>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
+          </div>
+
+          <button class="fs-5 text-light" style="background-color: rgb(4, 15, 46); width: 13%; height: 80px;" data-bs-toggle="offcanvas" data-bs-target="aside">
+
+            Search
+          </button>
+        </header>
+          <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Button with data-bs-target
+          </button>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+              </div>
+              <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+      
+
+    
+
+    <section class="d-flex " id="section1">
+        <div class=" border p-5 d-flex justify-content-center flex-column align-items-center border-1" style="background-color: rgb(4, 15, 46); " id="a1">
+        <h1 class="text-light display-4 fw-bold wow animate__animated animate__pulse">Browse the To<br><spam style="color: rgb(254, 200, 47);">Modern Modular</spam><br>Homes</h1>
+
+        <p class="text-secondary fs-5">Homofy is a modular home marketplace that helps<br> you
+            find, compare, and purchase a prefab modular<br> home.</p>
+
+        <button type="button" class=" ms-4 mt-4 me-auto  " style="color: rgb(254, 200, 47);" id="a2">Brower Home Now</button>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" id="a3">
+            <i class="bi bi-play-circle fs-4 me-3"></i>
+            <p class=" fs-5 pt-2 wow animate__animated animate__backInUp">View Promo Video</p>
+        </div>
+    </section><br>
+
+    <section class="d-flex justify-content-center flex-column align-items-center" id="section2">
+        <div class="w-75 h-25 ">
+            <p class="text-center" style="color: rgb(4, 15, 46);">Properties</p>
+            <h1 class="text-center">Display Latest & Featured Properties</h1>
+            <p class="text-center text-secondary pt-1">Get started by choosing from one of our pre-built page templates to showcase<br> your properties</p>
+        </div>
+        <div class="" id="b1">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+
+              <div class="swiper-slide">
+                <div class="d-flex justify-content-between align-items-center">
+<!-- 1st  -->
+
+                <div class="card mt-3 " style="width: 32%;">
+                  <img src="image/m..webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <spam class="">$ 6728</spam>
+                    <h5 class="card-title">Classic home</h5>
+                    <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                    <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+
+                    <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    
+
+                  </div>
+                </div>
+<!-- 2nd  -->
+                <div class="card mt-3 " style="width: 32%;">
+                  <img src="image/m1.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <spam class="">$ 6728</spam>
+                    <h5 class="card-title">Classic home</h5>
+                    <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                    <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+
+                    <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    
+
+                  </div>
+                </div>
+<!-- 3rd  --> 
+                <div class="card mt-3 " style="width: 32%;">
+                  <img src="image/m..webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <spam class="">$ 6728</spam>
+                    <h5 class="card-title">Classic home</h5>
+                    <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                    <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+
+                    <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                    
+
+                  </div>
+                </div>
+
+                <!-- end  -->
+              </div>
+              </div>
+
+              <!-- 2 slide  -->
+              <div class="swiper-slide">
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- 1st  -->
+                  
+                                  <div class="card mt-3 " style="width: 32%;">
+                                    <img src="image/m1.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <spam class="">$ 6728</spam>
+                                      <h5 class="card-title">Classic home</h5>
+                                      <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                                      <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                  
+                                      <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      
+                  
+                                    </div>
+                                  </div>
+                  <!-- 2nd  -->
+                                  <div class="card mt-3 " style="width: 32%;">
+                                    <img src="image/m..webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <spam class="">$ 6728</spam>
+                                      <h5 class="card-title">Classic home</h5>
+                                      <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                                      <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                  
+                                      <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      
+                  
+                                    </div>
+                                  </div>
+                  <!-- 3rd  --> 
+                                  <div class="card mt-3 " style="width: 32%;">
+                                    <img src="image/m1.webp" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <spam class="">$ 6728</spam>
+                                      <h5 class="card-title">Classic home</h5>
+                                      <p class="card-text">Get started by choosing from one of our pre-built page templates to showcase your properties</p><hr>
+                                      <i class="fa-solid fa-bed text-secondary"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      <i class="fa-solid fa-bath text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                  
+                                      <i class="fa-solid fa-building text-secondary ms-4"></i><spam class="text-secondary ps-2" style="font-size: 15px;">2 Bedroom</spam>
+                                      
+                  
+                                    </div>
+                                  </div>
+                  
+                                  <!-- end  -->
+                                </div>
+
+
+
+
+
+              </div>
+             
+            </div>
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
-      </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    </section>
+
+    <section class="d-flex" id="section3">
+      <div class="w-50 h-100 " style="background-color: rgb(255, 244, 216);">
+        <img src="image/visit2.jpg" class="w-100 h-100">
+      </div>
+      <div class="w-50 p-5 h-100 wow animate__animated animate__backInRight ">
+        <p class="">About Us</p>
+        <h1>From more than 25 years<br> we have provided real<br> estate services with<br> honesty trust and <br>transparency</h1>
+
+        <p class="pt-3 fs-5 text-secondary">Duis cursus, mi quis viverra ornare, eros pain, sometimes none<br> at all, freedom of the living creature was as the profit and<br> financial security. Jasmine neck adapter and just running it<br> lorem makeup hairstyle. Now sad smile of the television set.</p>
+
+        
+        <p class="pt-3 fs-5 text-secondary">Duis cursus, mi quis viverra ornare, eros pain, sometimes none<br> at all, freedom of the living creature was as the profit and<br> financial security. Jasmine neck adapter and just running it<br> lorem makeup hairstyle. Now sad smile of the television set.</p>
+
+        <button type="button" class="btn " style="width: 30%; height: 60px; border: 1px solid black; color: rgb(4, 15, 46);">Learn More</button>
+      </div>
+
+    </section>
+
+    <section class="d-flex justify-content-center align-items-center flex-column" id="section4">
+      <div class="w-75 h-25 ">
+        <p class="text-center" style="color: rgb(4, 15, 46);">Why Choose Us</p>
+        <h1 class="text-center">Our property includes all the little<br> details that makes your life a lot better</h1>
+        
+    </div>
+
+    <div class="w-100 h-50  d-flex justify-content-center align-items-center wow animate__animated animate__flipInX">
+      <div class="w-25  p-4 h-100 ">
+        <div class="rounded-circle mt-4 d-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background-color: rgb(254, 200, 47); ">01</div>
+
+        <h2 class="pt-3 fs-3" >Flexible lease lengths and start dates</h2>
+        <P class="pt-3 fs-5">Get started by choosing from one of our pre-built page templates to showcase your properties. We offer leases as short as 3-months and you can start any day of the month.</P>
+      </div>
+
+      <div class="w-25  p-4 h-100 ">
+        <div class="rounded-circle mt-4 border border-1 d-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background-color: rgb(254, 200, 47); ">02</div>
+
+        <h2 class="pt-3 fs-3" >Roommate moving out?
+          We’ll help you </h2>
+        <P class="pt-3 fs-5">Get started by choosing from one of our pre-built page templates to showcase your properties. We offer leases as short as 3-months and you can start any day of the month.</P>
+      </div>
+
+      <div class="w-25  p-4 h-100 ">
+        <div class="rounded-circle mt-4  d-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background-color: rgb(254, 200, 47); ">03</div>
+
+        <h2 class="pt-3 fs-3" >Need to move? You can transfer homes</h2>
+        <P class="pt-3 fs-5">Get started by choosing from one of our pre-built page templates to showcase your properties. We offer leases as short as 3-months and you can start any day of the month.</P>
+      </div>
+      <div class="w-25  p-4 h-100 ">
+        <div class="rounded-circle mt-4  d-flex justify-content-center align-items-center" style="width: 70px; height: 70px; background-color: rgb(254, 200, 47); ">04</div>
+
+        <h2 class="pt-3 fs-3" >Build a house profile</h2>
+        <P class="pt-3 fs-5">Get started by choosing from one of our pre-built page templates to showcase your properties. We offer leases as short as 3-months and you can start any day of the month.</P>
+      </div>
+      
+
+    </div>
+
+    <button class="mt-5 text-light fs-5" style="width: 20%;  height: 70px; background-color: rgb(18, 44, 119)">Brower Properties</button>
+    </section>
+
+    <section class="d-flex" id="section5">
+      <div class="w-50 p-5 h-100 wow animate__animated animate__backInLeft">
+        <h3>Customer say about us</h3>
+        <p class="fs-2 pt-5">“Far far away, behind the word<br> mountains, far from the countries<br> Vokalia and Consonantia, there live the<br> blind texts. Separated they live in <br>Bookmarksgrove right at the coast of<br> the Semantics, a large language ocean.”</p>
+
+        <div class="w-100 h-25 mt-5   d-flex border-1">
+          <div class="rounded-circle  " style="width: 120px; height: 120px;">
+          <img src="image/1..webp" class=" rounded-circle h-100">
+
+          </div>
+          <div class="w-50  d mt-4 ms-3">
+            <h5 class="pt-1">Sharon Needles</h5>
+            <p class="fs-5 fw-bold text-secondary">Creative Designer at Colorlib</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-50 h-100 wow animate__animated animate__backInRight ">
+        <img src="image/subscribe-img.jpg " class="w-100 h-100">
+      </div>
+
+    </section>
+
+    <section id="section6" class="d-flex flex-column align-items-center justify-content-center ">
+      <div class="w-75 h-25  mt-5">
+        <h1 class="text-center">Our Agents</h1>
+        <p class="text-center" style="color: rgb(4, 15, 46);">Get started by choosing from one of our pre-built page templates to<br> showcase your properties</p>
+
+        
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center" style=" width: 85%;height: 80%; ">
+      <div class=" h-100 wow animate__animated animate__pulse" style="width: 24%;"><img src="image/team1.jpg" class="w-100 d-flex justify-content-center align-items-center flex-column"><h4 class=" pt-3 text-center">Buster Hyman</h4><p class="text-center">Real Estate Agent</p></div>
+      <div class=" h-100 wow animate__animated animate__pulse" style="width: 24%;"><img src="image/team2.jpg" class="w-100 d-flex justify-content-center align-items-center flex-column"><h4 class=" pt-3 text-center">Buster Hyman</h4><p class="text-center">Real Estate Agent</p></div>
+      <div class=" h-100 wow animate__animated animate__pulse " style="width: 24%;"><img src="image/team3.jpg" class="w-100 d-flex justify-content-center align-items-center flex-column"><h4 class=" pt-3 text-center">Buster Hyman</h4><p class="text-center">Real Estate Agent</p></div>
+      <div class=" h-100 wow animate__animated animate__pulse " style="width: 24%;"><img src="image/team4.jpg" class="w-100 d-flex justify-content-center align-items-center flex-column"><h4 class=" pt-3 text-center">Buster Hyman</h4><p class="text-center">Real Estate Agent</p></div>
+
+    
+  
+  </div>
+    </section><br><br>
+
+    <section class="d-flex justify-content-center align-items-center" id="section7">
+      <div class="w-50 h-100 "><img src="image/subscribe-img.jpg" class="w-100 h-100"></div>
+      <div class="w-50 p-5 h-100  d-flex justify-content-center  flex-column" style="background-color: rgb(4, 15, 46);">
+      <h1 class="text-light">Subscribe Newsletter</h1>
+    <p class="text-light fs-5">Get started by choosing from one of our pre-built page templates to <br>showcase your properties
+
+    </p>
+
+    <input type="email" placeholder="Email" class=" mt-5 form-control border border-start-0 border-end-0 border-top-0 b" style="background: transparent;">
+
+    <button type="button" class="btn w-25 mt-5"  style="height: 13%; background-color: rgb(254, 200, 47);">Subscribe</button>
+    </div>
+
+    </section>
+
+    <footer class="d-flex justify-content-center align-items-center" id="footer">
+      <div class=" h-100  d-flex justify-content-center r flex-column" style="width: 20%;">
+       <img src="image/logo2_footer.png" class="w-50 me-5">
+       <p class="text-secondary pt-5">Duis aute irure dolor inasfa reprehenderit in voluptate velit esse cillum</p>
+       <div class="">
+       <i class="fa-brands fa-facebook-f fs-4 text-secondary"></i>
+       <i class="fa-brands fa-instagram fs-4 ms-3 text-secondary"></i>
+       <i class="fa-brands fa-linkedin  fs-4 ms-3 mt-3 text-secondary"></i></div>
+      </div>
+      <div class="d-flex justify-content-center r flex-column h-100" style="width: 17%;">
+      <h3>Navigation</h3>
+      <li style="list-style: none;" class="mt-3  text-secondary">Home</li>
+      <li style="list-style: none;" class="mt-3 text-secondary">About</li>
+      <li style="list-style: none;" class="mt-3 text-secondary">Services</li>
+       <li style="list-style: none;" class="mt-3 text-secondary">Blog</li>
+      <li style="list-style: none;" class="mt-3 text-secondary">Contact</li>
+      
+
+      </div>
+
+      <div class="d-flex justify-content-center r flex-column h-100 " style="width: 17%;">
+        <h3>Services</h3>
+        <li style="list-style: none;" class="mt-3 text-secondary">Drone Mapping</li>
+        <li style="list-style: none;" class="mt-3 text-secondary"> Real State</li>
+
+        <li style="list-style: none;" class="mt-3 text-secondary">Commercial</li>
+         <li style="list-style: none;" class="mt-3 text-secondary">Construction</li>
+        <li style="list-style: none;" class="mt-3 text-secondary"> Real State</li>
+
+        
+        
+  
+        </div>
+
+      <div class="d-flex justify-content-center r flex-column h-100 " style="width: 17%;">
+        <h3>Support</h3>
+        <li style="list-style: none;" class="mt-3 text-secondary">Drone Mapping</li>
+        <li style="list-style: none;" class="mt-3 text-secondary"> Real State</li>
+        <li style="list-style: none;" class="mt-3 text-secondary">Commercial</li>
+         <li style="list-style: none;" class="mt-3 text-secondary">Construction</li>
+         <li style="list-style: none;" class="mt-3 text-secondary">Construction</li>
+
+            
+  
+        </div>
+
+        
+        <div class="d-flex justify-content-center r flex-column h-100 " style="width: 17%;">
+          <h3>Contact Us</h3>
+          <li style="list-style: none;" class="mt-5 text-secondary">54/A, Millory, Kings Road, NYC</li>
+          <li style="list-style: none;" class="mt-3 text-secondary">contact@lendo.com</li>
+          <li style="list-style: none;" class="mt-3 text-secondary">10 (87) 738-3940</li>
+          
+          
+    
+          </div>
+
+          
+         
+      
+
+    </footer>
+
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<script>
+  new WOW().init();
+</script>
 </html>
