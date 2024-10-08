@@ -1,0 +1,605 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+
+/* Navigation Bar */
+header {
+    background-image: url('images/bgtop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hero-section {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 190px;
+    gap: 15px;
+}
+
+.hero-section h2 {
+    font-size: 4rem;
+}
+
+.cta-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* Slider Section */
+.slider-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #222;
+    padding: 110px 0px  110px 0px;
+}
+.slider-section h2{
+    margin-bottom: 50px;
+    color: white;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 100%;
+    justify-content: space-around;
+}
+
+.slide {
+    width: 30%;
+    position: relative;
+    animation: fadeInUp 0.6s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+
+}
+.slide:hover img{
+    transform: scale(1.05);
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.l{
+    margin-bottom: 4px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 70px 20px;
+    text-align: center;
+    height: 500px;
+    background-color: #222;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: white;
+
+}
+.gallery-section h2{
+    color: white;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+    height: 156px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+/* About Section */
+.about-animal {
+    background-image: url(images/abb.jpg);
+    padding: 60px 20px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    background-position: center center;
+}
+
+.about-content {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-section h2{
+    text-align: center;
+    margin: 20px 0px 50px 0;
+    color: white;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 20px;
+    color: white;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.learn-more-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-content img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Main About Us Section */
+.about-animal {
+    background: #222;
+    padding: 100px 20px;
+    color: white;
+}
+
+.about-animal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 20px;
+    animation: fadeInLeft 0.7s ease-in-out;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.656);
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #767676;
+    margin-bottom: 15px;
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 500px;
+    animation: fadeInRight 0.7s ease-in-out;
+}
+
+.about-images img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-animal-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .about-images {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-images img {
+        max-width: 300px;
+    }
+}
+
+
+/* Additional Info Section */
+.info-section {
+    padding: 50px 20px;
+    background-color: #222;
+    text-align: center;
+}
+.info-section h2{
+    color: white;
+    margin-bottom: 50px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: #4CAF50;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+/* Footer Styling */
+.footer {
+    padding-bottom: 70px;
+    background-color: #222; /* Dark background for footer */
+    color: #ccc; /* Light text color */
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* About Section */
+.footer-about {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Quick Links */
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Social Media Section */
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    color: #888;
+    font-size: 1rem;
+    border-top: 1px solid #444;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .hero-section{
+        padding-inline: 20px;
+        padding-top: 50px;
+    }
+    .about-images{
+        flex-direction: column;
+       
+    }
+    .about-images img, .about-content img{
+        max-width: 300px;
+    }
+    .slider{
+        flex-direction: column;
+    }
+
+    .slide{
+        width: 100%;
+        padding-inline: 10%;
+        padding-top: 40px;
+    }
+    .z{
+        margin-top: 20%;
+    }
+    .gallery-section{
+        height: auto;
+    }
+    .about-animal{
+        margin-top: -10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+
+    }
+    .footer-about , .footer-links, .footer-contact, .footer-social{
+        flex: 1;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .footer-about p{
+        padding-inline: 15%;
+    }
+    .social-icons{
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .slider{
+        flex-direction: column;
+    }
+
+    .slide{
+        width: 100%;
+        padding-inline: 10%;
+        padding-top: 40px;
+    }
+    .hero-section{
+        padding-inline: 20px;
+        padding-top: 50px;
+    }
+    .about-images{
+        flex-direction: column;
+       
+    }
+    .about-images img, .about-content img{
+        max-width: 300px;
+    }
+    .z{
+        margin-top: 30%;
+    }
+    .footer a {
+        font-size: 1rem;
+    }
+
+    .footer-contact ul li, .footer-links ul li {
+        font-size: 1rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        width: 100%;
+        
+    }
+    .footer-about , .footer-links, .footer-contact, .footer-social{
+        flex: 1;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .gallery-section{
+        height: auto;
+    }
+    .about-animal{
+        margin-top: -10px;
+    }
+}
