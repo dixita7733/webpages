@@ -1,41 +1,128 @@
 @media only screen and (min-width: 200px) and (max-width:600px){
-    .container{ width:100%;margin: auto;display: block;}
-    #header_top{display: flex;}
-    .contact .icon ul i{font-size: 20px;}
-    .contact .icon h1{font-size: 10px;}
-    .banner_slider .inner{width:100%;display: block;}
-    .banner_slider .right_side .title {padding-left: 0px; }
-    .banner_slider .right_side .title h1{text-align: center;font-size: 30px;}
-    .banner_slider  .right_side  button{margin: auto;text-align: center;display: block;float: none;}
-    #alx .right{width:100%;margin: 10px;}
-    #alx .left{ width:100%;} 
-    .about_page .details_point p{font-size: 10px;}
-    .about_page .right h3{text-align: center;font-size: 15px;}
-    .about_page .image img{width:400px;}
+    .container{ 
+        width:100%;margin: auto;
+        display: block;
+    }
+    #header_top{
+        display: flex;
+    }
+    .contact .icon ul i{
+        font-size: 20px;
+    }
+    .contact .icon h1{
+        font-size: 10px;
+    }
+    .banner_slider .inner{
+        width:100%;
+        display: block;
+    }
+    .banner_slider .right_side .title {
+        padding-left: 0px;
+     }
+    .banner_slider .right_side .title h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .banner_slider  .right_side  button{
+        margin: auto;
+        text-align: center;
+        display: block;
+        float: none;
+    }
+    #alx .right{
+        width:100%;
+        margin: 10px;
+    }
+    #alx .left{
+         width:100%;
+        } 
+    .about_page .details_point p{
+        font-size: 10px;
+    }
+    .about_page .right h3{
+        text-align: center;
+        font-size: 15px;
+    }
+    .about_page .image img{
+        width:400px;
+    }
     .dflex{display: block;}
-    .card{width: 100%;margin: 20px 0px 0px 0px;}
-    .features_page .responsive{ width:100%;}
-    .features_page .card{margin: 10px 0px 0px 5px;}
-    .core_page .responsive{width:100%;}
-    .core_page .card{margin: 20px 5px 0px 1px;}
-    .gallery{margin:15px;}
-    .gallery .right_side .image img{width: 350px;height: 350px}
-     #image_grid .col img{height: 350px;width: 350px;}
-    #image_grid .col2 .content img{height: 350px;width: 350px;}
-    #image_grid .col3 .content img {height: 350px;width: 350px;}
-    #image_grid .col4 img {height: 350px;width: 350px;} 
-    .details{width:100%;}
-    .contact .container{justify-content: center;}
-    .gallery .right_side {width: 100%;}
-    #image_grid .col{width: 100%;}
-    #image_grid .col2 {width: 100%;}
-    #image_grid .col3 {width: 100%;}
-    #image_grid .col4 {width: 100%;}
-    .gallery .container{display: block;}
-    .details{width:100%;}
-    .details .heading h1{text-align: center;    margin-top: -29px;    }
-    .details .title h1{text-align: center;}
-    .logo{text-align: center;}
+    .card{
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+    .features_page .responsive{ 
+        width:100%;
+    }
+    .features_page .card{
+        margin: 10px 0px 0px 5px;
+    }
+    .core_page .responsive{
+        width:100%;
+    }
+    .core_page .card{
+        margin: 20px 5px 0px 1px;
+    }
+    .gallery{
+        margin:15px;
+    }
+    .gallery .right_side .image img{
+        width: 350px;
+        height: 350px
+    }
+     #image_grid .col img{
+        height: 350px;
+        width: 350px;
+    }
+    #image_grid .col2 .content img{
+        height: 350px;
+        width: 350px;
+    }
+    #image_grid .col3 .content img {
+        height: 350px;
+        width: 350px;
+    }
+    #image_grid .col4 img {
+        height: 350px;
+        width: 350px;
+    } 
+    .details{
+        width:100%;
+    }
+    .contact .container{
+        justify-content: center;
+    }
+    .gallery .right_side {
+        width: 100%;
+    }
+    #image_grid .col{
+        width: 100%;
+    }
+    #image_grid .col2 {
+        width: 100%;
+    }
+    #image_grid .col3 {
+        width: 100%;
+    }
+    #image_grid .col4 {
+        width: 100%;
+    }
+    .gallery .container{
+        display: block;
+    }
+    .details{
+        width:100%;
+    }
+    .details .heading h1{
+        text-align: center;  
+        margin-top: -29px;  
+      }
+    .details .title h1{
+        text-align: center;
+    }
+    .logo{
+        text-align: center;
+    }
 
 }
 @media  only screen and (min-width: 601px) and (max-width:768px){

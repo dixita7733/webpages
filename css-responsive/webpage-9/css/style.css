@@ -534,16 +534,15 @@ body{
 
 /* Mobile Nav Button Bars Invididually */
 #drop-down-cbox + label span:nth-child(1) {
-	top: 35%; /* evenly spaced */
+	top: 35%; 
 }
 #drop-down-cbox + label span:nth-child(2) {
-	top: 50%; /* evenly spaced */
+	top: 50%; 
 }
 #drop-down-cbox + label span:nth-child(3) {
-	top: 65%; /* evenly spaced */
+	top: 65%;
 }
 
-/* Mobile Nav Button Styling for Checked */
 #drop-down-cbox:checked + label {
 	
     position: absolute;
@@ -553,17 +552,16 @@ body{
 	background-color: #fff;
 }
 
-/* Transform the bars into an 'X' */
 #drop-down-cbox:checked + label span:nth-child(1) {
 	top: 50%;
 	transform: translate(-50%, -50%) rotate(45deg); /* center, then rotate */
 }
 #drop-down-cbox:checked + label span:nth-child(2) {
-	left: -150%; /* move center bar out of the picture */
+	left: -150%; 
 }
 #drop-down-cbox:checked + label span:nth-child(3) {
 	top: 50%;
-	transform: translate(-50%, -50%) rotate(-45deg); /* center, then rotate */
+	transform: translate(-50%, -50%) rotate(-45deg); 
 }
 
 /* Main Nav Desktop */
@@ -602,13 +600,13 @@ body{
         left: 90%;}
 	
 	#drop-down-cbox + label {
-		display: block; /* unhide the mobile nav button */
+		display: block; 
       
 	}
 	
 	.main-nav {
-		max-height: 0px; /* same vertical grow transition trick as above */
-		height: 100%; /* take full vertical viewport height, -60px for nav-bar */
+		max-height: 0px; 
+		height: 100%; 
 		overflow: hidden;
 		position: absolute;
         top:14.5%;
@@ -629,7 +627,6 @@ body{
 		position: relative;
 	}
 	
-	/* design and position downward arrow */
 	.main-nav li span:after {
 		content: "";
 		width: 6px;

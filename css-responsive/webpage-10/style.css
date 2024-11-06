@@ -1,0 +1,453 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    padding: 1% 5% 1% 5%;
+    height: 70px;
+    align-items: center;
+}
+.social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.close{
+    font-size: 25px;
+    display: none !important;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    height: 560px;
+    background-color: #0000007a;
+}
+.menu ul a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none ;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.menu{  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 540px;
+    display: none;
+    position: absolute;
+}
+.banner{
+    display: flex;
+    height: 600px;
+    justify-content: space-between;
+    padding-inline: 7%;
+    align-items: center;
+    background-image: url(images/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+}
+.banner .right img{
+    width: 500px;
+}
+.banner .left h1{
+    font-size: 120px;
+    font-weight: 400;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.banner .left p{
+
+    letter-spacing: 1px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+.banner .left a{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px 30px ;
+    color: white;
+    background-color: black;
+    letter-spacing: 1px;
+}
+.headpart{
+    text-align: center;
+    margin: 70px 0px;
+    padding-inline: 25%;
+}
+.headpart h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+
+}
+.headpart p{
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+p{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    color: rgb(70, 69, 69);
+    font-weight: 300;
+}
+.mainp{
+    width: 23%;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 30px;
+}
+.pbox{
+   
+    padding: 25px;
+    
+}
+.pbox h3{
+    font-size: 23px;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 15px;
+}
+.pbox img{
+     margin: 30px 0px;
+     width: 200px;
+     height: 180px;
+}
+.productpart{
+    padding-inline: 7%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pricebox{
+    display: flex;
+    background-color: black;
+    padding: 15px;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+.pricebox p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: white;
+}
+.pricebox a{
+    color: black;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    background-color: white;
+    padding: 7px 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 300;
+}.pricebox .bcolor{
+    color: black;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f5ddb6;
+    padding: 7px 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 300;
+}
+.about{
+    display: flex;
+    height: 600px;
+    justify-content: space-between;
+    padding-inline: 8%;
+    align-items: center;
+    background-color: #fef4ec;
+    margin-top: 120px;
+}
+
+.about .aright img{
+    width: 500px;
+}
+.about .aleft h1{
+    font-size: 70px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    width: 80%;
+    margin-bottom: 20px;
+    
+}
+.about .aleft p{
+
+    letter-spacing: 1px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+.about .aleft a{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px 30px ;
+    color: white;
+    background-color: black;
+    letter-spacing: 1px;
+}
+.testpart{
+    padding-inline: 25%;
+    width: 100%;
+}
+.tbox{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 100px;
+}
+.tbox .tright{
+    align-items: center;
+    width: 100%;
+}
+
+.tbox .tleft{
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.tbox .tleft {
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 320px !important;
+    width: 15px !important; 
+    height: 15px !important; 
+    padding-inline: 46%;
+    
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black !important; 
+   
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 22px !important; 
+    margin: 30px 0px !important;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    padding: 10px 15px;
+}
+.contact{
+    padding-inline: 8%;
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0px;
+    align-items: center;
+
+}
+.contact .head{
+    width: 50%;
+}
+.contact .head h1{
+    font-size: 35px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+  
+}
+.contact a{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.acolor{
+    background-color: #f5ddb6 !important;
+    color: black !important;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 8%;
+}
+.contactp h1, .productp h1{
+    color: white;
+    font-size: 23px;
+    font-family: "Open Sans", sans-serif;
+
+}
+.contactp , .logop, .productp{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contactp a{
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    padding-inline: 10px;
+}
+.contactp li{
+    margin-bottom: 10px;
+}
+.contactp li img{
+    width: 13px;
+}
+.logop img{
+    padding-inline: 22%;
+ }
+.logop p{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(195 192 192);
+    font-size: 17px;
+
+}
+
+.productp{
+    padding-left: 120px;
+}
+.productp p{
+    color: rgb(195 192 192);
+    font-size: 17px
+}
+.fa-brands{
+    color: white !important;
+    padding-inline: 5%;
+}
+.foothr{
+    padding-inline: 7%;
+    background-color: black;
+    color: gray;
+}
+.ficon{
+    text-align: center;
+}
+.copyright{
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+}
+
+@media (max-width: 480px){
+    .banner .left h1 {
+        font-size: 98px;
+    }
+    .banner .left p{
+        width: 100%;
+    }
+    .banner .right img {
+        width: 300px;
+    }
+    .mainp {
+        width: 85%  !important;
+    }
+    .about .aright img {
+        width: 300px;
+    }
+    .testpart , .headpart{
+        padding-inline: 7%;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 70px;
+        padding: 15% 8%;
+    }
+    .contactp, .logop, .productp{
+        width: 100%;
+    }
+    .productp {
+        padding-left: 0px !important;
+    }
+}
+
+@media (max-width: 768px){
+    .banner {
+        flex-direction: column;
+    }
+    .mainp {
+        width: 45%;
+        margin-right: 12px;
+    }
+    .about {
+        display: flex;
+        height: auto;
+        padding: 15% 8%;
+        flex-direction: column;
+        gap: 77px;
+    }
+    .about .aleft h1, .about .aleft p{
+        width: 100%;
+    }
+    .contact {
+    flex-direction: column;
+    gap: 44px;
+    text-align: center;
+    }
+    .productp {
+        padding-left: 65px;
+    }
+    .banner {
+        display: flex;
+        height: auto;
+        padding: 99px 12%;
+        gap: 96px;
+    }
+}
+
+@media (max-width: 1024px){
+
+}
