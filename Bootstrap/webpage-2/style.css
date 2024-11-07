@@ -32,3 +32,34 @@
 .mapimg{
     width: 100%;
 }
+.headpart{
+    padding-inline: 30% !important;
+}
+.subsc{
+    margin-inline: 8%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 10;
+    background-color: white;
+
+}
+.social {
+    height: 40px;
+    width: 70px;
+    z-index: 100;
+    position: relative; /* Ensure it can use z-index */
+}
+
+.footer {
+    padding-inline: 13%;
+    background-color: rgba(190, 190, 190, 0.281);
+    margin-top: -5%;
+    padding-top: 10% !important;
+    padding-bottom: 4%;
+    position: relative; /* Ensure stacking context */
+    z-index: 0; /* Default level */
+}
+
+.foot {
+    position: relative; /* Ensure it can use z-index */
+    z-index: -100;
+}
