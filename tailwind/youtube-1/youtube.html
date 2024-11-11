@@ -47,13 +47,24 @@
     }
     .swiper-button-next{
         position: static;
+        /* font-size: 10px !important; */
+    color: black;
    
     }
     .swiper-button-prev{
         position: static;
     
-    font-size: 10px !important;
+    /* font-size: 10px !important; */
+    color: black;
     }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 25px !important;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 25px !important;
+}
     .bigsidebar{
         width: 15% !important;
         justify-content: start !important;
@@ -85,9 +96,9 @@
         width: 85% !important;
     }
     .smallslide{
-        width: 80% !important;
+        width: 85% !important;
         position: absolute;
-        left: 230px !important;
+        left: 205px !important;
     }
 
     
@@ -182,7 +193,7 @@
 
  <!-- Swiper -->
   <div class="contentbar w-[95%]">
-  <div class="slide flex items-center justify-between h-[80px] w-[92%] fixed top-[60px] right-[70px]  left-[70px] z-10 bg-white">
+  <div class="slide flex items-center justify-between h-[80px] w-[95%] pr-5 fixed top-[60px] right-[70px]  left-[70px] z-10 bg-white">
     <div class="swiper-button-prev bg-white mt-[3px]"></div>
 
  <div class="swiper mySwiper">

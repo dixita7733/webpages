@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+   <style>
+    html,
+    body {
+      position: relative;
+      
+    }
+
+    .swiper {
+      width: 95% !important;
+      height: 100%;
+      /* padding-left: 40px;
+      padding-right: 40px; */
+    }
+    .swiper-wrapper{
+        width: auto;
+        /* padding-right: 50px;
+        padding-left: 50px; */
+    }
+    .swiper-pagination, .swiper-scrollbar{
+        display: none;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: auto !important;
+      margin-right: 10px;
+    }
+    .swiper-slide-next{
+        width: auto !important;
+        /* margin-right: 10px; */
+    }
+    .swiper-slide.swiper-slide-next{
+        width: auto !important;
+    }
+    .swiper-button-next{
+        position: static;
+        /* font-size: 10px !important; */
+    color: black;
+   
+    }
+    .swiper-button-prev{
+        position: static;
+    
+    /* font-size: 10px !important; */
+    color: black;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 25px !important;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 25px !important;
+}
+    .bigsidebar{
+        width: 15% !important;
+        justify-content: start !important;
+        align-items: start !important;
+    }
+    .bigiconbox{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: start !important;
+        align-items: center;
+        gap: 15px;
+        align-items: center;
+        height: 40px;
+    }
+
+    .bigiconbox p{
+        font-size: 17px !important;
+       
+       
+    }
+    .bigiconbox i{
+        padding-left: 20px;
+    }
+    .bigsidebar .home{
+        background-color: #F2F2F2 !important;
+
+    }
+    .smallcontentbar{
+        width: 85% !important;
+    }
+    .smallslide{
+        width: 85% !important;
+        position: absolute;
+        left: 205px !important;
+    }
+
+    
+
+    
+    @media only screen and (min-width: 769px) {
+      .swiper-slide:first-child {
+        transition: transform 100ms;
+      }
+
+      .swiper-slide:first-child img {
+        transition: box-shadow 500ms;
+      }
+
+      .swiper-slide.swiper-slide-active:first-child {
+        /* transform: translateX(50%); */
+        z-index: 2;
+      }
+
+      .swiper-slide.swiper-slide-active:first-child img {
+        box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+      }
+
+      .swiper-slide:nth-child(2) {
+        transition: transform 100ms;
+      }
+
+      .swiper-slide.swiper-slide-next:nth-child(2) {
+        /* transform: translateX(55%); */
+        z-index: 1;
+      }
+
+      .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+        /* transform: translateX(-50%); */
+      }
+
+      .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+        /* transform: translateX(-55%); */
+      }
+    }
+    </style>
+</head>
+<body class="relative">
+    <header class="flex justify-between px-4 bg-white h-[60px] fixed w-full top-0 z-10">
+        <div class="logoportion flex h-[60px] items-center gap-3">
+    <div class="hamburger h-[40px] w-[40px] rounded-full hover:bg-[#F2F2F2] flex items-center justify-center">
+    <i class="fa-solid fa-bars text-[20px]"></i>
+   </div>
+    <div class="logo flex">
+    <img src="assets/youtubelogo.png" class="w-[100px] h-[30px]">
+    <sub class="text-[10px]">IN</sub>
+   </div>
+  </div>
+
+  <div class="searchbar flex items-center gap-3">
+    <form action="/action_page.php" class="border border-gray-400 px-2 rounded-[30px] h-[38px] w-[540px] flex items-center justify-between">
+        <input type="text" placeholder="Search.." name="search" class="focus:outline-none">
+        <button type="submit"><i class="fa fa-search border-l border-gray-400 px-3 h-[38px] flex items-center text-[20px] text-[#474747] "></i></button>
+      </form>
+      <i class="fa-solid fa-microphone text-[20px] h-[40px] w-[40px] rounded-full bg-[#F2F2F2] flex items-center justify-center"></i>
+  </div>
+
+  <div class="anotherbtn flex items-center justify-between gap-6 pe-5">
+    <div class="videoplus bg-[#F2F2F2] flex items-center justify-center w-[40px] h-[40px] rounded-full">
+    <img src="assets/videoplus-re.png" class="w-[20px] h-[15px] ">
+    </div>
+    <i class="fa-regular fa-bell text-[22px]"></i>
+    <img src="assets/profilepic.jpg" class="w-[30px] h-[30px] rounded-full">
+  </div>
+</header>
+
+<div class="contentarea flex w-[100%] ">
+<div class="sidebar w-[5%]  flex flex-col  gap-[10px] ">
+    <div class="iconbox text-center text-[20px] py-[0px] hover:bg-[#F2F2F2] mx-[5px] rounded-md h-[50px]  flex flex-col items-center justify-center ">
+        <i class="fa-solid fa-house text-[18px]"></i>
+        <p class="text-[10px]">Home</p>
+    </div>
+    <div class="iconbox text-center text-[20px] py-[0px] hover:bg-[#F2F2F2] mx-[5px] rounded-md h-[50px]  flex flex-col items-center justify-center ">
+        <i class="fa-regular fa-circle-play"></i>
+         <p class="text-[10px]">Shorts</p>
+    </div>
+    <div class="iconbox text-center text-[20px] py-[0px] hover:bg-[#F2F2F2] mx-[5px] rounded-md h-[50px]  flex flex-col items-center justify-center ">
+        <i class="fa-regular fa-file-video"></i>
+        <p class="text-[10px]">Subscription</p>
+    </div>
+    <div class="iconbox text-center text-[20px] py-[0px] hover:bg-[#F2F2F2] mx-[5px] rounded-md h-[50px]  flex flex-col items-center justify-center ">
+        <i class="fa-solid fa-clapperboard text-[18px]"></i>
+        <p class="text-[10px]">You</p>
+    </div>
+</div>
+
+
+ <!-- Swiper -->
+  <div class="contentbar w-[95%]">
+  <div class="slide flex items-center justify-between h-[80px] w-[95%] pr-5 fixed top-[60px] right-[70px]  left-[70px] z-10 bg-white">
+    <div class="swiper-button-prev bg-white mt-[3px]"></div>
+
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">All</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Live</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">News</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Music</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Disha Vakani</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Garba</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Crowds</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Tamil Cinema</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Indian soap operas</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Source code</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Computer Programming</p>
+      </div>
+      <div class="swiper-slide">
+        <p class="px-[13px] py-[3px] text-[15px] rounded-md bg-[#F2F2F2]">Indian popup</p>
+      </div>
+    </div>
+    
+    
+   
+  </div>
+    <div class="swiper-button-next bg-white mt-[3px]"></div>
+</div>
+
+<div class="youboxmain grid grid-cols-3 w-auto mt-[130px]">
+<div class="youtube-boxces p-[20px] ">
+    <img src="assets/slider1.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px] w-[100%]">
+        <div class="youleft  w-[12%]">
+            <img src="assets/slider1user.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright  w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2" >Why Hitler Lost? | World War 2 | Dhruv Rathee</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">Dhruv Rathee</p>
+                <div class="flex items-center gap-2">
+                <p class="">14M views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>1 year ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="youtube-boxces p-[20px] w-auto">
+    <img src="assets/slider2.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px] w-[100%]">
+        <div class="youleft  w-[12%]">
+            <img src="assets/slider2user.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2">Kya Gunda Banega Re Tu | Phir Hera Pheri | Akshay Kumar,Suniel Shetty,Paresh Rawal,Rimi</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">Movie India</p>
+                <div class="flex items-center gap-2">
+                <p class="">11M views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>6 Months ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="youtube-boxces p-[20px] w-auto">
+    <img src="assets/s3.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px] w-[100%]">
+        <div class="youleft w-[12%]">
+            <img src="assets/sab.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2">अपने घर में ढेर सारा Cash देखकर Bhide को हुई घबराहट! | Taarak Mehta Ka Ooltah Chashmah by Sony SAB 217,585 views 9 hours ago 59 minutes</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">Sony SAB</p>
+                <div class="flex items-center gap-2">
+                <p class="">217k views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>9 hours ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="youtube-boxces p-[20px] w-auto">
+    <img src="assets/s4.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px] w-[100%]">
+        <div class="youleft w-[12%]">
+            <img src="assets/ssub4.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2">Coolest Sweet Chocolate Cake Decorating Hacks | Awesome Cake Compilation Cake Hacks | So Yummy by Just Cakes 1,317,937 views 2 months ago 2 hours</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">Just Cakes</p>
+                <div class="flex items-center gap-2">
+                <p class="">1.3M views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>2 Months ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="youtube-boxces p-[20px] w-auto">
+    <img src="assets/s5.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px] w-[100%]">
+        <div class="youleft w-[12%] ">
+            <img src="assets/ssub5.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2">SUNIYAN SUNIYAN (Official Audio) Juss x MixSingh x Teji Sandhu | Punjabi Songs 2024 | ZAYN WORLDWIDE by ZAYN 4,123,290 views 3 months ago 3 minutes, 16 seconds</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">ZAYN</p>
+                <div class="flex items-center gap-2">
+                <p class="">4.1M views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>3 Months ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="youtube-boxces p-[20px] w-auto">
+    <img src="assets/s6.webp" class="w-[400px] h-[200px] rounded-[15px]">
+    <div class="you-content flex gap-[10px] mt-[10px]  w-[100%] ">
+        <div class="youleft w-[12%]">
+            <img src="assets/ssub6.jpg" class="w-[40px] h-[40px] rounded-full">
+        </div>
+        <div class="youright w-[88%]">
+            <div class="youtop flex gap-4 ">
+            <h4 class="w-[88%] line-clamp-2">Gadar 2 Full Movie | Sunny Deol | New Blockbuster Action in Hindi 2024 | New Bollywood Movie Hindi by Zehr Vibe 652,878 views 17 hours ago 2 hours, 7 minutes</h4>
+            <i class="fa-solid fa-ellipsis-vertical mt-[10px]"></i>
+            </div>
+            <div class="youbottom text-[#606060]">
+                <p class="text-[15px] ">Zehr Vibe</p>
+                <div class="flex items-center gap-2">
+                <p class="">652k views </p> <i class="fa-solid fa-circle text-[4px] pt-[4px]"></i> <p>17 hours ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- jquery -->
+ <script src="jquery.js"></script>
+ <script>
+    $(document).ready(function(){
+        $(".fa-bars").click(function(){
+             $(".sidebar").toggleClass("bigsidebar");
+             $(".contentbar").toggleClass("smallcontentbar")
+             $(".iconbox").toggleClass("bigiconbox")
+             $(".slide").toggleClass("smallslide")
+        })
+    })
+ </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 10,
+          slidesPerGroup: 1,
+        },
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  
+</body>
+</html>
