@@ -716,6 +716,16 @@ ul.menu {
 .links li:hover {
     color: #FFA801;
 }
+.copy{
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    background-color: rgba(0, 0, 36, 0.80);
+    margin-bottom: 0px !important;
+    
+}
 
 /*==========================Responsive=============================*/
 @media all and (max-width: 1172px) {
